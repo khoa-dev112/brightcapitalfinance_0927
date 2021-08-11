@@ -4,6 +4,7 @@ require('dotenv').config();
 
 // Routes
 const userRouter = require('./api/users/user.router')
+const lenderRouter = require('./api/lenders/lender.router')
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.get('/api', (req, res) => {
 
 // Use routes
 app.use('/api/users/', userRouter)
+app.use('/api/lenders/', lenderRouter)
 
 // listen for requests
 app.listen(process.env.APP_PORT, () => {
