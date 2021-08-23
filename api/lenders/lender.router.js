@@ -8,7 +8,7 @@ const {
 const router = require('express').Router();
 
 router.post('/', createLender);
-router.get('/', getLenders);
+router.get('/lenders', getLenders);
 router.get('/:id', getLenderById);
 router.patch('/', updateLender);
 router.delete('/', deleteLender);
