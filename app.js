@@ -4,6 +4,7 @@ const ejs = require('ejs');
 const bcrypt = require('bcrypt');
 const methodOverride = require('method-override');
 const flash = require('connect-flash')
+const morgan = require('morgan');
 require('dotenv').config();
 
 // Routes
@@ -12,6 +13,8 @@ const lenderRouter = require('./api/lenders/lender.router')
 const indexRouter = require('./api/index/index.router')
 
 const app = express();
+
+app.use(morgan('short'));
 
 app.use(express.json());
 

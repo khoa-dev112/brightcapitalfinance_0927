@@ -3,93 +3,310 @@
 <div class="container container-header">
 <!-- <header class="jumbotron"> -->
     <div class = "container py-5">
-        <span><img src="../../public/img/BCF_logo.jpg" alt="">Logo</span>
+        <img src="../../public/img/BCF_logo.jpg" alt="Bright Capital Finance" width="200" height="80">
         <h1 class="display-1">Bright Capital Finance</h1>
+        
         <div class="card shadow-2-strong">
-          <div class="card-body p-5 text-center" style="background-color: #D6E1E4;">
+          <div class="col-md-12 card-body p-5 text-center" style="background-color: #D6E1E4;">
             <h1 class="display-6">For a brighter future</h1>
-            <form action="/input1" method="POST" class="inner-outer-container py-4">
+            <form action="/lender" method="POST" class="inner-outer-container py-4">
                 <!-- Row 0 of the form  -->
                 <div class="row">
                     <div class="col-lg-12 py-2">
                         <div class="row g-2">
                             <div class="col-md">
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="" name="LenderCompanyName" required>
                                     <label for="floatingInput">Lender Company Name</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="FirstName" required>
                                     <label for="floatingPassword">First Name</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="LastName" required>
                                     <label for="floatingPassword">Last Name</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required name="JobTitle">
                                     <label for="floatingPassword">Job Title</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="">
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="BusinessPhone">
                                     <label for="floatingPassword">Business Phone</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="MobilePhone" required>
                                     <label for="floatingPassword">Mobile Phone</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="EmailAddress" required>
                                     <label for="floatingPassword">Email Address</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="StreetAddress" required>
                                     <label for="floatingPassword">Street Address</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="City" required>
                                     <label for="floatingPassword">City</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="PostCode" required>
                                     <label for="floatingPassword">Post Code</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="State" required>
                                     <label for="floatingPassword">State</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="Country" required>
                                     <label for="floatingPassword">Country</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLend" required>
                                     <label for="floatingPassword">Minimum Loan Lend</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required>
+                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLend" required>
                                     <label for="floatingPassword">Maximum Loan Lend</label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                      Default checkbox
-                                    </label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                      Checked checkbox
-                                    </label>
-                                  </div>
+                                <div class="col-md-12">
+                                    <div class="card-body p-5 text-center" style="background-color: #ffffff;">
+                                        <p class="d-flex justify-content-start">Accepted Areas for Security</p>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="NSWMero">
+                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                            NSW Metro
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="NSWRegional">
+                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                            NSW Regional
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="ACT">
+                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                            ACT
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="VICMetro">
+                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                            VIC Metro
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="VICRegional">
+                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                            VIC Regional
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="QLDMetro">
+                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                            QLD Metro
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="QLDRegional">
+                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                            QLD Regional
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="WAMetro">
+                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                            WA Metro
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="NSWRegional">
+                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                            WA Regional
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="ACT">
+                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                            SA Metro
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="VICMetro">
+                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                            SA Regional
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="VICRegional">
+                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                            TAS Metro
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="QLDMetro">
+                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                            TAS Regional
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="QLDRegional">
+                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                            NT Metro
+                                            </label>
+                                        </div>
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="WAMetro">
+                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                            NT Regional
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            <div class="col-md-12">   
+                                 
+                                        <p class="d-flex justify-content-start">Type of Security Accepted</p>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="CommercialDevelopmentSite">
+                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                        Commercial Development Site
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="EntertainmentVenues">
+                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                        Entertainment Venues
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="LandBanking">
+                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                        Land Banking
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="ResidentialDevelopmentSite">
+                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                        Residential Development Site
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="ResidualUnitsStock">
+                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                        Residual Units Stock
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="RetirementVillages">
+                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                        Retirement Villages
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="StudentAccommodation">
+                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                        Student Accommodation
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="VacantLandNoDA">
+                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                        Vacant Land NO Development Approval (DA)
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="VacantLandWithDA">
+                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                        Vacant Land WITH Development Approval (DA)
+                                        </label>
+                                    </div>
+                                
+                            </div>
+                                <div class="col-md-4">`
+                                    <p class="d-flex justify-content-start">Type of Loans Offered</p>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="BuildToRent">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Build to Rent
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="CommercialAssetPurchase">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                        Commercial Asset Purchase
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="CommercialAssetRefinance">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Commercial Asset Refinance
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="DevelopmentFinance">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                        Development Finance
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="EquityFinance">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        Equity Finance
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="MezzanineFinance">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                        Mezzanine Finance
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="NDIS/SDA">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                        NDIS/SDA
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="Resources">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                        Resources (eg. Mining operations)
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="SecondMortgages">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                        Second Mortgages
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="ServicedApartmentsHotelConstruction">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                        Serviced Apartments / Hotel Construction
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="SubdivisionFinance">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                        Subdivision Finance
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>     
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
             </form>
         </div>
-      </div>
     </div>
+</div>
 
 <!-- </header> -->
 
