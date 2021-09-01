@@ -2,11 +2,13 @@
 
 <div class="container container-header">
 <!-- <header class="jumbotron"> -->
-    <div class = "container py-5">
-        <img src="../../public/img/BCF_logo.jpg" alt="Bright Capital Finance" width="200" height="80">
+    <div class = "container py-5 d-flex justify-content-center">
+        <!-- <img src="../../public/img/BCF_logo.jpg" alt="Bright Capital Finance" width="200" height="80"> -->
         <h1 class="display-1">Bright Capital Finance</h1>
-        
-        <div class="card shadow-2-strong">
+
+        </div>
+        <div class="d-flex justify-content-center">
+        <div class="card col-md-6 shadow-2-strong">
           <div class="col-md-12 card-body p-5 text-center" style="background-color: #D6E1E4;">
             <h1 class="display-6">For a brighter future</h1>
             <form action="/lender" method="POST" class="inner-outer-container py-4">
@@ -71,11 +73,12 @@
                                     <input type="text" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLend" required>
                                     <label for="floatingPassword">Maximum Loan Lend</label>
                                 </div>
+
                                 <div class="col-md-12">
-                                    <div class="card-body p-5 text-center" style="background-color: #ffffff;">
-                                        <p class="d-flex justify-content-start">Accepted Areas for Security</p>
+                                    <div class="card-body p-5 mb-3 text-center" style="background-color: #ffffff;">
+                                        <h4 class="d-flex justify-content-center">Accepted Areas for Security</h4>
                                         <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="NSWMero">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="NSWMetro">
                                             <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                             NSW Metro
                                             </label>
@@ -168,134 +171,130 @@
                                 </div>
                                 
                                 
-                            <div class="col-md-12">   
-                                 
-                                        <p class="d-flex justify-content-start">Type of Security Accepted</p>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="CommercialDevelopmentSite">
+                            
+                            <div class="col-md-12">
+                                <div class="card-body p-5 mb-3 text-center" style="background-color: #ffffff;">
+                                    <h4 class="d-flex justify-content-center">Type of Loans Offered</h4>
+                                    <label for="floatingSelectGrid">Residential Development Construction</label>
+                                    <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
+                                    <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="ResidualDevelopmentConstruction" aria-label="Floating label select example">
+                                        <!-- <option disabled>Residential Development Construction</option> -->
+                                        <option value="Apartments">Apartments</option>
+                                        <option value="TownhouseVilla">Townhouse/Villa</option>
+                                        <option value="RetirementVillage">Retirement Village</option>
+                                      </select>
+                                      
+                                        <div class="invalid-feedback">
+                                          Please select an item(s) from the list
+                                        </div>
+                                    
+                                    <div class="form-check d-flex justify-content-start mb-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="ResidualApartmentStock">
+                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                        Residual Apartment Stock
+                                        </label>
+                                    </div>
+
+                                    <label for="floatingSelectGrid">Commercial Construction</label>
+                                    <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
+                                    <select class="form-select mb-3" multiple size='4' id="floatingSelectGrid" name="ResidualDevelopmentConstruction" aria-label="Floating label select example">
+                                        
+                                        <option value="NonSpecialistConstruction">Non specialist Construction</option>
+                                        <option value="ServicedApartmentsHotel">Serviced Apartments/Hotel</option>
+                                        <option value="StudentAccomodation">Student Accomodation</option>
+                                        <option value="Hostel">Hostel</option>
+                                      </select>
+                                      
+                                    <div class="invalid-feedback">
+                                      Please select an item(s) from the list
+                                    </div>
+
+                                    <div class="form-check d-flex justify-content-start mb-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="CommercialSitePurchaseRefinance">
                                         <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                        Commercial Development Site
+                                        Commercial Site Purchase / Refinance
                                         </label>
                                     </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="EntertainmentVenues">
-                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                        Entertainment Venues
-                                        </label>
+                                    <label for="floatingSelectGrid">Land Subdivision</label>
+                                    <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
+                                    <select class="form-select mb-3" multiple size='2' id="floatingSelectGrid" name="LandSubdivision" aria-label="Floating label select example">
+                                        
+                                        <option value="Residential">Residential</option>
+                                        <option value="Commercial">Commercial</option>
+                                        
+                                      </select>
+                                      
+                                    <div class="invalid-feedback">
+                                      Please select an item(s) from the list
                                     </div>
+
+                                    <label for="floatingSelectGrid">Land Purchase / Refinance</label>
+                                    <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
+                                    <select class="form-select mb-3" multiple size='2' id="floatingSelectGrid" name="LandSubdivision" aria-label="Floating label select example">
+                                        
+                                        <option value="ResidentialWithDA">Residential with D.A.</option>
+                                        <option value="ResidentialWithoutDA">Residential without D.A.</option>
+                                      </select>
+                                      
+                                    <div class="invalid-feedback">
+                                      Please select an item(s) from the list
+                                    </div>
+
+                                    <label for="floatingSelectGrid">Build To Rent</label>
+                                    <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
+                                    <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="LandSubdivision" aria-label="Floating label select example">
+                                        
+                                        <option value="RentConstruction">Construction</option>
+                                        <option value="RentPurchase">Purchase</option>
+                                        <option value="RentRefinance">Refinance</option>
+                                        
+                                      </select>
+                                      
+                                    <div class="invalid-feedback">
+                                      Please select an item(s) from the list
+                                    </div>
+
+                                    <label for="floatingSelectGrid">NDIS/SDA</label>
+                                    <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
+                                    <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="LandSubdivision" aria-label="Floating label select example">
+                                        
+                                        <option value="NDISSDAConstruction">Construction</option>
+                                        <option value="NDISSDAPurchase">Purchase</option>
+                                        <option value="NDISSDARefinance">Refinance</option>
+                                        
+                                      </select>
+                                      
+                                    <div class="invalid-feedback">
+                                      Please select an item(s) from the list
+                                    </div>
+
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="LandBanking">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="SecondMortgages>
                                         <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                        Land Banking
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="ResidentialDevelopmentSite">
-                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                        Residential Development Site
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="ResidualUnitsStock">
-                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                        Residual Units Stock
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="RetirementVillages">
-                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                        Retirement Villages
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="StudentAccommodation">
-                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                        Student Accommodation
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="VacantLandNoDA">
-                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                        Vacant Land NO Development Approval (DA)
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="VacantLandWithDA">
-                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                        Vacant Land WITH Development Approval (DA)
-                                        </label>
-                                    </div>
-                                
-                            </div>
-                                <div class="col-md-4">`
-                                    <p class="d-flex justify-content-start">Type of Loans Offered</p>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="BuildToRent">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                        Build to Rent
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="CommercialAssetPurchase">
-                                        <label class="form-check-label" for="flexCheckChecked">
-                                        Commercial Asset Purchase
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="CommercialAssetRefinance">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                        Commercial Asset Refinance
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="DevelopmentFinance">
-                                        <label class="form-check-label" for="flexCheckChecked">
-                                        Development Finance
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="EquityFinance">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                        Equity Finance
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="MezzanineFinance">
-                                        <label class="form-check-label" for="flexCheckChecked">
-                                        Mezzanine Finance
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="NDIS/SDA">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                        NDIS/SDA
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="Resources">
-                                        <label class="form-check-label" for="flexCheckChecked">
-                                        Resources (eg. Mining operations)
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="SecondMortgages">
-                                        <label class="form-check-label" for="flexCheckChecked">
                                         Second Mortgages
                                         </label>
                                     </div>
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="ServicedApartmentsHotelConstruction">
-                                        <label class="form-check-label" for="flexCheckChecked">
-                                        Serviced Apartments / Hotel Construction
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="EquityFinance">
+                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                        Equity Finance
                                         </label>
                                     </div>
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="SubdivisionFinance">
-                                        <label class="form-check-label" for="flexCheckChecked">
-                                        Subdivision Finance
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="MezzanineFinance">
+                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                        Mezzanine Finance
                                         </label>
                                     </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="Resources">
+                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                        Resources (eg. Mining operations)
+                                        </label>
+                                    </div>
+                                    
                                 </div>
+                            </div>
                                 
                                 
                             </div>
@@ -306,6 +305,7 @@
             </form>
         </div>
     </div>
+</div>
 </div>
 
 <!-- </header> -->

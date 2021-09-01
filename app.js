@@ -10,7 +10,7 @@ require('dotenv').config();
 // Routes
 const userRouter = require('./api/users/user.router')
 const lenderRouter = require('./api/lenders/lender.router')
-const indexRouter = require('./api/index/index.router')
+const indexRouter = require('./api/index/index.router copy')
 
 const app = express();
 
