@@ -19,51 +19,58 @@ router.get("/successful", (req, res) => {
 
 router.post("/lender", (req, res) => {
     console.log("Trying to add a new lender")
-    const lenderCompanyName = req.body.LenderCompanyNamme
-    const firstName = req.body.FirstName
-    const lastName = req.body.LastName
-    const jobTitle = req.body.JobTitle
-    const businessPhone = req.body.BusinessPhone
-    const mobilePhone = req.body.MobilePhone
-    const email = req.body.EmailAddress
-    const streetAddress = req.body.StreetAddress
-    const city = req.body.City
-    const postCode = req.body.PostCode
-    const state = req.body.State
-    const country = req.body.Country
-    const minLoanLend = req.body.MinLoanLend
-    const maxLoanLend = req.body.MaxLoanLend
-    const additionalNotes = req.body.AdditionalNotes
-    const entven = req.body.entven
-    const hotels = req.body.hotels
-    const pubs = req.body.pubs
-    const resstk = req.body.resstk
-    const retvil = req.body.retvil
-    const stuacc = req.body.stuacc
-    const vlnda = req.body.vlnda
-    const vlwda = req.body.vlwda
-    const asspur = req.body.asspur
-    const assref = req.body.assref
-    const devfin = req.body.devfin
-    const eqtfin = req.body.eqtfin
-    const mezfin = req.body.mezfin
-    const resour = req.body.resour
-    const secmor = req.body.secmor
-    const subfin = req.body.subfin
-    const aas_nswmetro = req.body.NSWMetro
-    const aas_nswregional = req.body.aas_nswregional
-    const aas_act = req.body.aas_act
-    const aas_vicmetro = req.body.aas_vicmetro
-    const aas_qldmetro = req.body.aas_qldmetro
-    const aas_qldregional = req.body.aas_qldregional
-    const aas_wametro = req.body.aas_wametro
-    const aas_waregional = req.body.aas_waregional
-    const aas_sametro = req.body.aas_sametro
-    const aas_saregional = req.body.aas_saregional
-    const aas_tasmetro = req.body.aas_tasmetro
-    const aas_tasregional = req.body.aas_tasregional
-    const aas_ntmetro = req.body.aas_ntmetro
-    const aas_ntregional = req.body.aas_ntregional
+    const lender = req.body
+    const firstName = lender.FirstName
+    const lastName = lender.LastName
+    const jobTitle = lender.JobTitle
+    const businessPhone = lender.BusinessPhone
+    const mobilePhone = lender.MobilePhone
+    const email = lender.EmailAddress
+    const streetAddress = lender.StreetAddress
+    const city = lender.City
+    const postCode = lender.PostCode
+    const state = lender.State
+    const country = lender.Country
+    const minLoanLend = lender.MinLoanLend
+    const maxLoanLend = lender.MaxLoanLend
+    // const additionalNotes = lender.AdditionalNotes
+    const aas_nswmetro = lender.NSWMetro
+    const aas_nswregional = lender.aas_nswregional
+    const aas_act = lender.aas_act
+    const aas_vicmetro = lender.aas_vicmetro
+    const aas_qldmetro = lender.aas_qldmetro
+    const aas_qldregional = lender.aas_qldregional
+    const aas_wametro = lender.aas_wametro
+    const aas_waregional = lender.aas_waregional
+    const aas_sametro = lender.aas_sametro
+    const aas_saregional = lender.aas_saregional
+    const aas_tasmetro = lender.aas_tasmetro
+    const aas_tasregional = lender.aas_tasregional
+    const aas_ntmetro = lender.aas_ntmetro
+    const aas_ntregional = lender.aas_ntregional
+    const apartments = lender.Apartments
+    const townhousevilla = lender.TownHouseVilla
+    const retirementvillage = lender.RetirementVillage
+    const residualapartmentstock = lender.ResidualApartmentStock
+    const nonspecialistconstruction = lender.NonSpecialistConstruction
+    const servicedapartmentshotel = lender.ServicedApartmentsHotel
+    const studentaccomodation = lender.StudentAccomodation
+    const hostel = lender.Hostel
+    const commercialsitepurchaserefinance = lender.CommercialSitePurchaseRefinance
+    const residentialsubdivision = lender.ResidentalSubdivision
+    const commercialsubdivision = lender.CommercialSubdivision
+    const residentialwithda = lender.ResidentialWithDA
+    const residentialwithoutda = lender.ResidentialWithoutD
+    const constructionbtr = lender.RentConstruction
+    const purchasebtr = lender.RentPurchase
+    const refinancebtr = lender.RefinancePurchase
+    const constructionndissda = lender.NDISSDAConstruction
+    const purchasendissda = lender.NDISSDAPurchase
+    const refinancendissda = lender.NDISSDARefinance
+    const secondmortgages = lender.SecondMortgages
+    const equityfinance = lender.EquityFinance
+    const mezzaninefinance = lender.MezzanineFinance
+    const resources = lender.Resources
     
 
     const sql = `INSERT INTO lenders (lendercompany, 
@@ -79,43 +86,51 @@ router.post("/lender", (req, res) => {
                                     state, 
                                     country, 
                                     minloanlend, 
-                                    maxloanlend, 
-                                    additionalnotes,
-                                    entven, 
-                                    hotels,
-                                    pubs, 
-                                    resstk, 
-                                    retvil, 
-                                    stuacc, 
-                                    vlnda, 
-                                    vlwda,
-                                    asspur, 
-                                    assref, 
-                                    devfin, 
-                                    eqtfin, 
-                                    mezfin, 
-                                    resour,
-                                    secmor, 
-                                    subfin,     
-                                    aas_nswmetro, 
+                                    maxloanlend,
+                                    aas_nswmetro,
                                     aas_nswregional,
-                                    aas_act, 
-                                    aas_vicmetro, 
+                                    aas_act,
+                                    aas_vicmetro,
+                                    aas_vicregional,
                                     aas_qldmetro,
-                                    aas_qldregional, 
-                                    aas_wametro, 
-                                    aas_waregional, 
+                                    aas_qldregional,
+                                    aas_wametro,
+                                    aas_waregional,
                                     aas_sametro,
-                                    aas_saregional, 
-                                    aas_tasmetro, 
-                                    aas_tasregional, 
+                                    aas_saregional,
+                                    aas_tasmetro,
+                                    aas_tasregional,
                                     aas_ntmetro,
-                                    aas_ntregional) 
+                                    aas_ntregional,
+                                    apartments,
+                                    townhousevilla,
+                                    retirementvillage,
+                                    residualapartmentstock,
+                                    nonspecialistconstruction,
+                                    servicedapartmentshotel,
+                                    studentaccomodation,
+                                    hostel,
+                                    commercialsitepurchaserefinance,
+                                    residentialsubdivision,
+                                    commercialsubdivision,
+                                    residentialwithda,
+                                    residentialwithoutda,
+                                    constructionbtr,
+                                    purchasebtr,
+                                    refinancebtr,
+                                    constructionndissda,
+                                    purchasendissda,
+                                    refinancendissda,
+                                    secondmortgages,
+                                    equityfinance,
+                                    mezzaninefinance,
+                                    resources) 
                                     VALUES (?,?,?,?,?,?,?,?,?,?,
                                             ?,?,?,?,?,?,?,?,?,?,
                                             ?,?,?,?,?,?,?,?,?,?,
                                             ?,?,?,?,?,?,?,?,?,?,
-                                            ?,?,?,?,?)`
+                                            ?,?,?,?,?,?,?,?,?,?,
+                                            ?,?)`
 
     pool.query(sql, [lenderCompanyName, 
                         firstName, 
@@ -130,38 +145,45 @@ router.post("/lender", (req, res) => {
                         state, 
                         country, 
                         minLoanLend, 
-                        maxLoanLend, 
-                        additionalNotes, 
-                        entven, 
-                        hotels, 
-                        pubs, 
-                        resstk, 
-                        retvil, 
-                        stuacc, 
-                        vlnda, 
-                        vlwda, 
-                        asspur,
-                        assref, 
-                        devfin, 
-                        eqtfin, 
-                        mezfin, 
-                        resour, 
-                        secmor, 
-                        subfin, 
-                        aas_nswmetro, 
-                        aas_nswregional, 
-                        aas_act, 
-                        aas_vicmetro, 
+                        maxLoanLend,
+                        aas_nswmetro,
+                        aas_nswregional,
+                        aas_act,
+                        aas_vicmetro,
+                        aas_vicregional,
                         aas_qldmetro,
-                        aas_qldregional, 
-                        aas_wametro, 
-                        aas_waregional, 
+                        aas_qldregional,
+                        aas_wametro,
+                        aas_waregional,
                         aas_sametro,
-                        aas_saregional, 
-                        aas_tasmetro, 
-                        aas_tasregional, 
+                        aas_saregional,
+                        aas_tasmetro,
+                        aas_tasregional,
                         aas_ntmetro,
-                        aas_ntregional
+                        aas_ntregional,
+                        apartments,
+                        townhousevilla,
+                        retirementvillage,
+                        residualapartmentstock,
+                        nonspecialistconstruction,
+                        servicedapartmentshotel,
+                        studentaccomodation,
+                        hostel,
+                        commercialsitepurchaserefinance,
+                        residentialsubdivision,
+                        commercialsubdivision,
+                        residentialwithda,
+                        residentialwithoutda,
+                        constructionbtr,
+                        purchasebtr,
+                        refinancebtr,
+                        constructionndissda,
+                        purchasendissda,
+                        refinancendissda,
+                        secondmortgages,
+                        equityfinance,
+                        mezzaninefinance,
+                        resources
                     ], (err, results, fields)=>{
         if(err){
             console.log("Failed to insert lender data")

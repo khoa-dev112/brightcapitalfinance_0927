@@ -7,8 +7,8 @@
         <h1 class="display-1">Bright Capital Finance</h1>
 
         </div>
-        <div class="d-flex justify-content-center">
-        <div class="card col-md-6 shadow-2-strong">
+        <div class="d-flex justify-content-center py-3">
+        <div class="card col-md-10 shadow-2-strong">
           <div class="col-md-12 card-body p-5 text-center" style="background-color: #D6E1E4;">
             <h1 class="display-6">For a brighter future</h1>
             <form action="/lender" method="POST" class="inner-outer-container py-4">
@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-lg-12 py-2">
                         <div class="row g-2">
-                            <div class="col-md">
+                            <div class="lender-form col-md">
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="floatingInput" placeholder="" name="LenderCompanyName" required>
                                     <label for="floatingInput">Lender Company Name</label>
@@ -126,43 +126,43 @@
                                             </label>
                                         </div>
                                         <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="NSWRegional">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="WARegional">
                                             <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
                                             WA Regional
                                             </label>
                                         </div>
                                         <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="ACT">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="SAMetro">
                                             <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                             SA Metro
                                             </label>
                                         </div>
                                         <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="VICMetro">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="SARegional">
                                             <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
                                             SA Regional
                                             </label>
                                         </div>
                                         <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="VICRegional">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="TASMetro">
                                             <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                             TAS Metro
                                             </label>
                                         </div>
                                         <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="QLDMetro">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="TASRegional">
                                             <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
                                             TAS Regional
                                             </label>
                                         </div>
                                         <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="QLDRegional">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="NTMetro">
                                             <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                             NT Metro
                                             </label>
                                         </div>
                                         <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="WAMetro">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" name="NTRegional">
                                             <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
                                             NT Regional
                                             </label>
@@ -175,13 +175,13 @@
                             <div class="col-md-12">
                                 <div class="card-body p-5 mb-3 text-center" style="background-color: #ffffff;">
                                     <h4 class="d-flex justify-content-center">Type of Loans Offered</h4>
-                                    <label for="floatingSelectGrid">Residential Development Construction</label>
+                                    <label class="select-label" for="floatingSelectGrid">Residential Development Construction</label>
                                     <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
                                     <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="ResidualDevelopmentConstruction" aria-label="Floating label select example">
                                         <!-- <option disabled>Residential Development Construction</option> -->
-                                        <option value="Apartments">Apartments</option>
-                                        <option value="TownhouseVilla">Townhouse/Villa</option>
-                                        <option value="RetirementVillage">Retirement Village</option>
+                                        <option value="Apartments" name="Apartments">Apartments</option>
+                                        <option value="TownhouseVilla" name="TownhouseVilla">Townhouse/Villa</option>
+                                        <option value="RetirementVillage" name="RetirementVillage">Retirement Village</option>
                                       </select>
                                       
                                         <div class="invalid-feedback">
@@ -195,7 +195,7 @@
                                         </label>
                                     </div>
 
-                                    <label for="floatingSelectGrid">Commercial Construction</label>
+                                    <label class="select-label" for="floatingSelectGrid">Commercial Construction</label>
                                     <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
                                     <select class="form-select mb-3" multiple size='4' id="floatingSelectGrid" name="ResidualDevelopmentConstruction" aria-label="Floating label select example">
                                         
@@ -215,7 +215,7 @@
                                         Commercial Site Purchase / Refinance
                                         </label>
                                     </div>
-                                    <label for="floatingSelectGrid">Land Subdivision</label>
+                                    <label class="select-label" for="floatingSelectGrid">Land Subdivision</label>
                                     <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
                                     <select class="form-select mb-3" multiple size='2' id="floatingSelectGrid" name="LandSubdivision" aria-label="Floating label select example">
                                         
@@ -228,7 +228,7 @@
                                       Please select an item(s) from the list
                                     </div>
 
-                                    <label for="floatingSelectGrid">Land Purchase / Refinance</label>
+                                    <label class="select-label" for="floatingSelectGrid">Land Purchase / Refinance</label>
                                     <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
                                     <select class="form-select mb-3" multiple size='2' id="floatingSelectGrid" name="LandSubdivision" aria-label="Floating label select example">
                                         
@@ -240,7 +240,7 @@
                                       Please select an item(s) from the list
                                     </div>
 
-                                    <label for="floatingSelectGrid">Build To Rent</label>
+                                    <label class="select-label" for="floatingSelectGrid">Build To Rent</label>
                                     <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
                                     <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="LandSubdivision" aria-label="Floating label select example">
                                         
@@ -254,14 +254,14 @@
                                       Please select an item(s) from the list
                                     </div>
 
-                                    <label for="floatingSelectGrid">NDIS/SDA</label>
+                                    <label class="select-label" for="floatingSelectGrid">NDIS/SDA</label>
                                     <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
                                     <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="LandSubdivision" aria-label="Floating label select example">
                                         
                                         <option value="NDISSDAConstruction">Construction</option>
                                         <option value="NDISSDAPurchase">Purchase</option>
                                         <option value="NDISSDARefinance">Refinance</option>
-                                        
+                
                                       </select>
                                       
                                     <div class="invalid-feedback">
@@ -269,7 +269,7 @@
                                     </div>
 
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="SecondMortgages>
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="SecondMortgages">
                                         <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                         Second Mortgages
                                         </label>

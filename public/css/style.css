@@ -1,0 +1,34 @@
+h1 {
+  font-size: clamp(40px, 5vw, 70px);
+}
+
+h4 {
+  font-size: clamp(20px, 3vw, 40px);
+}
+
+p {
+  font-size: clamp(1em, 2vw, 2em);
+}
+
+.select-label {
+  font-size: clamp(20px, 1vw, 1em);
+}
+
+.fw-lighter {
+  font-size: clamp(15px, 1vw, 1em);
+}
+
+.form-check label {
+  font-size: clamp(15px, 1vw, 1em);
+}
+
+/* Eliminate the card body padding and hide "Use shift or ctrl to multiselect" for mobile screens */
+@media only screen and (max-width: 600px) {
+  .card-body {
+    padding: 1rem !important;
+  }
+  .fw-lighter {
+    visibility: hidden;
+    font-size: 0px;
+  }
+}
