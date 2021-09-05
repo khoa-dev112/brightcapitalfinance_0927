@@ -19,7 +19,9 @@ router.get("/successful", (req, res) => {
 
 router.post("/lender", (req, res) => {
     console.log("Trying to add a new lender")
+    console.log(req.body.aas_nswmetro)
     const lender = req.body
+    const lenderCompanyName = lender.LenderCompanyName
     const firstName = lender.FirstName
     const lastName = lender.LastName
     const jobTitle = lender.JobTitle
@@ -31,46 +33,51 @@ router.post("/lender", (req, res) => {
     const postCode = lender.PostCode
     const state = lender.State
     const country = lender.Country
-    const minLoanLend = lender.MinLoanLend
-    const maxLoanLend = lender.MaxLoanLend
+    const minLoanLend = lender.MinimumLoanLend
+    const maxLoanLend = lender.MaximumLoanLend
     // const additionalNotes = lender.AdditionalNotes
     const aas_nswmetro = lender.NSWMetro
-    const aas_nswregional = lender.aas_nswregional
-    const aas_act = lender.aas_act
-    const aas_vicmetro = lender.aas_vicmetro
-    const aas_qldmetro = lender.aas_qldmetro
-    const aas_qldregional = lender.aas_qldregional
-    const aas_wametro = lender.aas_wametro
-    const aas_waregional = lender.aas_waregional
-    const aas_sametro = lender.aas_sametro
-    const aas_saregional = lender.aas_saregional
-    const aas_tasmetro = lender.aas_tasmetro
-    const aas_tasregional = lender.aas_tasregional
-    const aas_ntmetro = lender.aas_ntmetro
-    const aas_ntregional = lender.aas_ntregional
-    const apartments = lender.Apartments
-    const townhousevilla = lender.TownHouseVilla
-    const retirementvillage = lender.RetirementVillage
-    const residualapartmentstock = lender.ResidualApartmentStock
-    const nonspecialistconstruction = lender.NonSpecialistConstruction
-    const servicedapartmentshotel = lender.ServicedApartmentsHotel
-    const studentaccomodation = lender.StudentAccomodation
-    const hostel = lender.Hostel
-    const commercialsitepurchaserefinance = lender.CommercialSitePurchaseRefinance
-    const residentialsubdivision = lender.ResidentalSubdivision
-    const commercialsubdivision = lender.CommercialSubdivision
-    const residentialwithda = lender.ResidentialWithDA
-    const residentialwithoutda = lender.ResidentialWithoutD
-    const constructionbtr = lender.RentConstruction
-    const purchasebtr = lender.RentPurchase
-    const refinancebtr = lender.RefinancePurchase
-    const constructionndissda = lender.NDISSDAConstruction
-    const purchasendissda = lender.NDISSDAPurchase
-    const refinancendissda = lender.NDISSDARefinance
-    const secondmortgages = lender.SecondMortgages
-    const equityfinance = lender.EquityFinance
-    const mezzaninefinance = lender.MezzanineFinance
-    const resources = lender.Resources
+    const aas_nswregional = lender.NSWRegional
+    const aas_act = lender.ACT
+    const aas_vicmetro = lender.VICMetro
+    const aas_vicregional = lender.VICRegional
+    const aas_qldmetro = lender.QLDMetro
+    const aas_qldregional = lender.QLDRegional
+    const aas_wametro = lender.WAMetro
+    const aas_waregional = lender.WARegional
+    const aas_sametro = lender.SAMetro
+    const aas_saregional = lender.SARegional
+    const aas_tasmetro = lender.TASMetro
+    const aas_tasregional = lender.TASRegional
+    const aas_ntmetro = lender.NTMetro
+    const aas_ntregional = lender.NTRegional
+    // const resDevConstruction = lender.ResidentialDevelopmentConstruction
+    const residualApartmentStock = lender.ResidualApartmentStock
+    const commercialSitePurchaseRefinance = lender.CommercialSitePurchaseRefinance
+    const landSubdivision = lender.LandSubdivision
+    // const apartments = lender.Apartments
+    // const townhousevilla = lender.TownHouseVilla
+    // const retirementvillage = lender.RetirementVillage
+    // const residualapartmentstock = lender.ResidualApartmentStock
+    // const nonspecialistconstruction = lender.NonSpecialistConstruction
+    // const servicedapartmentshotel = lender.ServicedApartmentsHotel
+    // const studentaccomodation = lender.StudentAccomodation
+    // const hostel = lender.Hostel
+    // const commercialsitepurchaserefinance = lender.CommercialSitePurchaseRefinance
+    // const residentialsubdivision = lender.ResidentalSubdivision
+    // const commercialsubdivision = lender.CommercialSubdivision
+    // const residentialwithda = lender.ResidentialWithDA
+    // const residentialwithoutda = lender.ResidentialWithoutD
+    // const constructionbtr = lender.RentConstruction
+    // const purchasebtr = lender.RentPurchase
+    // const refinancebtr = lender.RefinancePurchase
+    // const constructionndissda = lender.NDISSDAConstruction
+    // const purchasendissda = lender.NDISSDAPurchase
+    // const refinancendissda = lender.NDISSDARefinance
+    // const secondmortgages = lender.SecondMortgages
+    // const equityfinance = lender.EquityFinance
+    // const mezzaninefinance = lender.MezzanineFinance
+    // const resources = lender.Resources
     
 
     const sql = `INSERT INTO lenders (lendercompany, 
@@ -101,33 +108,11 @@ router.post("/lender", (req, res) => {
                                     aas_tasmetro,
                                     aas_tasregional,
                                     aas_ntmetro,
-                                    aas_ntregional,
-                                    apartments,
-                                    townhousevilla,
-                                    retirementvillage,
+                                    aas_ntregional,                                   
                                     residualapartmentstock,
-                                    nonspecialistconstruction,
-                                    servicedapartmentshotel,
-                                    studentaccomodation,
-                                    hostel,
-                                    commercialsitepurchaserefinance,
-                                    residentialsubdivision,
-                                    commercialsubdivision,
-                                    residentialwithda,
-                                    residentialwithoutda,
-                                    constructionbtr,
-                                    purchasebtr,
-                                    refinancebtr,
-                                    constructionndissda,
-                                    purchasendissda,
-                                    refinancendissda,
-                                    secondmortgages,
-                                    equityfinance,
-                                    mezzaninefinance,
-                                    resources) 
+                                    commercial_site_purchase_refinance,
+                                    landsubdivision) 
                                     VALUES (?,?,?,?,?,?,?,?,?,?,
-                                            ?,?,?,?,?,?,?,?,?,?,
-                                            ?,?,?,?,?,?,?,?,?,?,
                                             ?,?,?,?,?,?,?,?,?,?,
                                             ?,?,?,?,?,?,?,?,?,?,
                                             ?,?)`
@@ -161,39 +146,43 @@ router.post("/lender", (req, res) => {
                         aas_tasregional,
                         aas_ntmetro,
                         aas_ntregional,
-                        apartments,
-                        townhousevilla,
-                        retirementvillage,
-                        residualapartmentstock,
-                        nonspecialistconstruction,
-                        servicedapartmentshotel,
-                        studentaccomodation,
-                        hostel,
-                        commercialsitepurchaserefinance,
-                        residentialsubdivision,
-                        commercialsubdivision,
-                        residentialwithda,
-                        residentialwithoutda,
-                        constructionbtr,
-                        purchasebtr,
-                        refinancebtr,
-                        constructionndissda,
-                        purchasendissda,
-                        refinancendissda,
-                        secondmortgages,
-                        equityfinance,
-                        mezzaninefinance,
-                        resources
+                        // resDevConstruction,
+                        residualApartmentStock,
+                        // apartments,
+                        // townhousevilla,
+                        // retirementvillage,
+                        // residualapartmentstock,
+                        // nonspecialistconstruction,
+                        // servicedapartmentshotel,
+                        // studentaccomodation,
+                        // hostel,
+                        commercialSitePurchaseRefinance,
+                        landSubdivision
+                        // residentialsubdivision,
+                        // commercialsubdivision,
+                        // residentialwithda,
+                        // residentialwithoutda,
+                        // constructionbtr,
+                        // purchasebtr,
+                        // refinancebtr,
+                        // constructionndissda,
+                        // purchasendissda,
+                        // refinancendissda,
+                        // secondmortgages,
+                        // equityfinance,
+                        // mezzaninefinance,
+                        // resources
                     ], (err, results, fields)=>{
         if(err){
-            console.log("Failed to insert lender data")
+            console.log("Failed to insert lender data!!!")
+            console.log(err)
             res.sendStatus(500)
             return
         }
         console.log("Inserted a new lender with id: " + results.insertedId);
         res.end()
     })
-    res.redirect('/')
+    res.redirect('/successful')
 })
 
 module.exports = router;
