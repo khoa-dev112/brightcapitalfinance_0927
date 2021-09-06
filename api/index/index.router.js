@@ -55,29 +55,7 @@ router.post("/lender", (req, res) => {
     const residualApartmentStock = lender.ResidualApartmentStock
     const commercialSitePurchaseRefinance = lender.CommercialSitePurchaseRefinance
     const landSubdivision = lender.LandSubdivision
-    // const apartments = lender.Apartments
-    // const townhousevilla = lender.TownHouseVilla
-    // const retirementvillage = lender.RetirementVillage
-    // const residualapartmentstock = lender.ResidualApartmentStock
-    // const nonspecialistconstruction = lender.NonSpecialistConstruction
-    // const servicedapartmentshotel = lender.ServicedApartmentsHotel
-    // const studentaccomodation = lender.StudentAccomodation
-    // const hostel = lender.Hostel
-    // const commercialsitepurchaserefinance = lender.CommercialSitePurchaseRefinance
-    // const residentialsubdivision = lender.ResidentalSubdivision
-    // const commercialsubdivision = lender.CommercialSubdivision
-    // const residentialwithda = lender.ResidentialWithDA
-    // const residentialwithoutda = lender.ResidentialWithoutD
-    // const constructionbtr = lender.RentConstruction
-    // const purchasebtr = lender.RentPurchase
-    // const refinancebtr = lender.RefinancePurchase
-    // const constructionndissda = lender.NDISSDAConstruction
-    // const purchasendissda = lender.NDISSDAPurchase
-    // const refinancendissda = lender.NDISSDARefinance
-    // const secondmortgages = lender.SecondMortgages
-    // const equityfinance = lender.EquityFinance
-    // const mezzaninefinance = lender.MezzanineFinance
-    // const resources = lender.Resources
+    
     
 
     const sql = `INSERT INTO lenders (lendercompany, 
@@ -148,30 +126,9 @@ router.post("/lender", (req, res) => {
                         aas_ntregional,
                         // resDevConstruction,
                         residualApartmentStock,
-                        // apartments,
-                        // townhousevilla,
-                        // retirementvillage,
-                        // residualapartmentstock,
-                        // nonspecialistconstruction,
-                        // servicedapartmentshotel,
-                        // studentaccomodation,
-                        // hostel,
                         commercialSitePurchaseRefinance,
                         landSubdivision
-                        // residentialsubdivision,
-                        // commercialsubdivision,
-                        // residentialwithda,
-                        // residentialwithoutda,
-                        // constructionbtr,
-                        // purchasebtr,
-                        // refinancebtr,
-                        // constructionndissda,
-                        // purchasendissda,
-                        // refinancendissda,
-                        // secondmortgages,
-                        // equityfinance,
-                        // mezzaninefinance,
-                        // resources
+ 
                     ], (err, results, fields)=>{
         if(err){
             console.log("Failed to insert lender data!!!")
