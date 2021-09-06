@@ -5,8 +5,8 @@ Initial database setup in Azure
 
     host: 'tbrannon-mysql-demo.mysql.database.azure.com',
     user: 'toddb@tbrannon-mysql-demo.mysql.database.azure.com',
-    password: ,
-    database: '',
+    password: 'Azure4BCF_2021',
+    database: 'brightcapitalfinance',
     port: 3306,
     ssl: true
 
