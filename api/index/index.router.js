@@ -142,4 +142,17 @@ router.post("/lender", (req, res) => {
     res.redirect('/successful')
 })
 
+// All Lenders GET Route
+router.get('/lenders', (req, res) => {
+    let sql = "SELECT * FROM lenders WHERE liid IS NOT NULL;";
+    let query = pool.query(sql, (err, rows, results) => {
+        if(err) throw err;
+        console.log(rows[0].liid)
+        res.render('lenders', {
+            title:'Bright Capital Finance - All Lenders',
+            lenderresults : rows
+        })
+    })
+})
+
 module.exports = router;

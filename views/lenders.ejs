@@ -1,0 +1,53 @@
+<%- include ('partials/header') -%>
+
+
+
+<div class="container container-header">
+
+<nav aria-label="breadcrumb" class="mt-4">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Lenders</li>
+    </ol>
+</nav>
+
+<!-- <header class="jumbotron"> -->
+    <div class = "container py-2">
+        <h1 class="display-4">Bright Capital Finance</h1>
+            <h1 class="display-6">Existing Lenders</h1>
+            <!-- View Sales -->
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                      <th scope="col">Lender Company</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Job Title</th>
+                      <th scope="col">Email</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% lenderresults.forEach(function(lenderresult) { %> 
+                        <tr>
+                            <td><%= lenderresult.lendercompany %></td>
+                            <td><%= lenderresult.firstname %></td>
+                            <td><%= lenderresult.lastname %></td>
+                            <td><%= lenderresult.jobtitle %></td>
+                            <td><%= lenderresult.email %></td>
+                            <td>
+                                <a href="/lenders/<%= lenderresult.liid %>" class="btn btn-sm btn-primary">Detail</a>
+                                
+                                <a href="/" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>    
+
+   </div>        
+</div>
+
+
+
+<%- include ('partials/footer') -%>
