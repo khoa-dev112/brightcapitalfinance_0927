@@ -1,16 +1,19 @@
 <%- include ('partials/header') -%>
 
-<div class="container container-header">
+<div class="container container-header" style="background-color: #4d4d4d; margin:auto; width:100vh;">
 <!-- <header class="jumbotron"> -->
     <div class = "container py-5 d-flex justify-content-center">
-        <img src="../img/BCF_logo.jpg" alt="Bright Capital Finance" width="500" height="175">
+        
+            <img src="../img/BCF_logo.jpg" alt="Bright Capital Finance" width="650" height="175">
+      
+        
         <!-- <h1 class="display-1">Bright Capital Finance</h1> -->
 
         </div>
         <div class="d-flex justify-content-center py-3">
         <div class="card col-md-10 shadow-2-strong">
-          <div class="col-md-12 card-body p-5 text-center" style="background-color: #e5f7ff;">
-            <h1 class="display-6" style="color: #4d4d4d;">Lender Questionnaire</h1>
+          <div class="col-md-12 card-body p-5 text-center" style="background-color: #949494;">
+            <h1 class="display-6" style="color: #F6DA11;">Lender Questionnaire</h1>
             <form action="/lender" method="POST" class="inner-outer-container py-4">
                 <!-- Row 0 of the form  -->
                 <div class="row">
@@ -174,7 +177,7 @@
                             
                             <div class="col-md-12">
                                 <div class="card-body p-5 mb-3 text-center" style="background-color: #ffffff;">
-                                    <h4 class="d-flex justify-content-center">Type of Loans Offered</h4>
+                                    <h4 class="display-6 d-flex justify-content-center" style="color: #4d4d4d">Type of Loans Offered</h4>
                                     <label class="select-label" for="floatingSelectGrid">Residential Development Construction</label>
                                     <p class="fw-lighter mb-1" >Use shift or ctrl to multiselect</p>
                                     <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="ResidentialDevelopmentConstruction" aria-label="Floating label select example">
