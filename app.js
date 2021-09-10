@@ -7,6 +7,8 @@ const flash = require('connect-flash')
 const morgan = require('morgan');
 require('dotenv').config();
 
+const port = process.env.PORT || process.env.APP_PORT;
+
 // Routes
 const userRouter = require('./api/users/user.router')
 const lenderRouter = require('./api/lenders/lender.router')
@@ -44,6 +46,6 @@ app.use('/api/lender/', lenderRouter)
 
 
 // listen for requests
-app.listen(process.env.APP_PORT, () => {
-    console.log("The server is running on port: ", process.env.APP_PORT);
+app.listen(port, () => {
+  console.log(`The server is running on port ${port}...`);
   });
