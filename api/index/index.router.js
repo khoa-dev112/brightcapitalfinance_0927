@@ -6,7 +6,10 @@ const router = express.Router();
 const pool = require("../../config/database")
 
 router.get('/', (req, res) => {
-    res.send('This is your landing page - for testing purposes only.')
+    res.render("/landing", {
+        title: 'BCF'
+    })
+
 })
 
 router.get("/lender", (req, res) => {
