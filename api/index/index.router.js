@@ -6,7 +6,7 @@ const router = express.Router();
 const pool = require("../../config/database")
 
 router.get('/', (req, res) => {
-    res.render("/landing", {
+    res.render("landing", {
         title: 'BCF'
     })
 

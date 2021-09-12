@@ -25,6 +25,30 @@
 <!-- <script src="js/bootstrap-datepicker.min.js"></script>
 <script src="js/bootstrap-datepicker-en-CA.min"></script> -->
 
+<script type="text/javascript">
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    // DO NOT REMOVE - TBrannon (08/28/2021) -----------------------------------------------
+    (function () {
+      'use strict'
+    
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+    
+            form.classList.add('was-validated')
+          }, false)
+        })
+    })()
+    </script>
+
 <script>
     $('.mydatatable').DataTable({
         lengthMenu:[[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]]
