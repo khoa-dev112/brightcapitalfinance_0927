@@ -10,8 +10,8 @@ require('dotenv').config();
 const port = process.env.PORT || process.env.APP_PORT;
 
 // Routes
-const userRouter = require('./api/users/user.router')
-const lenderRouter = require('./api/lenders/lender.router')
+// const userRouter = require('./api/users/user.router')
+// const lenderRouter = require('./api/lenders/lender.router')
 const indexRouter = require('./api/index/index.router')
 
 const app = express();
@@ -30,19 +30,10 @@ app.set('views', __dirname + '/views');
 app.use(methodOverride("_method"));
 app.use(flash());
 
-
-// app.get('/', (req, res) => {
-//     res.send("Hello from the root route!")
-// }); 
-
-// app.get('/api', (req, res) => {
-//     res.send("Hello from the api route!")
-// }); 
-
 // Use routes
 app.use('/', indexRouter)
-app.use('/api/users/', userRouter)
-app.use('/api/lender/', lenderRouter)
+// app.use('/api/users/', userRouter)
+// app.use('/api/lender/', lenderRouter)
 
 
 // listen for requests

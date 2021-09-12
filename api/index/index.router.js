@@ -130,4 +130,30 @@ router.get('/lenders', (req, res) => {
     })
 })
 
+// LENDER DETAIL GET ROUTE - view detail of a lender
+router.get("/lenders/:liid", (req, res) => {
+    // the order with the provided ID
+    //render edit template with that sale
+    
+    let id = req.params.liid
+    let sql = 'SELECT * FROM lenders WHERE liid = ' + id + ';'
+    console.log(sql)
+    
+    let query = pool.query(sql, (err, rows) => {
+        if(err) throw err;
+        console.log(sql)
+        console.log(rows[0].aas_nswmetro)
+        res.render('lenderdetail', {
+            title: 'Bright Capital Finance - Lender Detail',
+            lenderresult: rows[0]
+        }) 
+    })
+});
+
+router.delete('/lenders/:id', (req, res) => {
+    let id = req.body.id
+    let sql = "SELECT * FROM lenders WHERE liid = " + id + ";"
+    let query = pool.query(sql, )
+})
+
 module.exports = router;
