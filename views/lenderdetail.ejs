@@ -12,12 +12,12 @@
     <div class = "container py-4">
         <!-- <h1 class="display-4">Bright Capital Finance</h1> -->
         
-        <!-- <nav aria-label="breadcrumb" class="mt-4">
+        <nav aria-label="breadcrumb" class="mt-4">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Lenders</li>
+              <li class="breadcrumb-item"><a href="/lenders ">Lenders</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Lender Detail</li>
             </ol>
-        </nav> -->
+        </nav>
         <div class="text-center">
             <h1 class="display-6 existing-lenders" style="color: #4d4d4d; text-underline-position: auto; text-decoration:underline;">Lender Detail</h1>
         </div>
@@ -209,9 +209,12 @@
                                         <p class="fw-lighter mb-1" >Select all that apply</p>
                                         <select class="form-select mb-3" multiple="multiple" size='3' id="floatingSelectGrid" name="ResidentialDevelopmentConstruction" aria-label="Floating label select example">
                                             <!-- <option disabled>Residential Development Construction</option> -->
-                                            <option value="0" name="ResDevConstApartments">Apartments</option>
-                                            <option value="1" name="ResDevConstTownhouseVilla">Townhouse/Villa</option>
-                                            <option value="2" name="ResDevConstRetirementVillage">Retirement Village</option>
+                                            <option name="ResDevConstApartments" value="<%= lenderresult.apartments %>" <% if(lenderresult.apartments != null){ %> 
+                                                selected <% }%> >Apartments</option>
+                                            <option name="ResDevConstTownhouseVilla" value="<%= lenderresult.townhouse_villa %>" <% if(lenderresult.townhouse_villa != null){ %> 
+                                                selected <% }%> >Townhouse/Villa</option>
+                                            <option name="ResDevConstRetirementVillage" value="<%= lenderresult.retirement_village %>" <% if(lenderresult.retirement_village != null){ %> 
+                                                selected <% }%> >Retirement Village</option>
                                           </select>
                                           
                                             <div class="invalid-feedback">
@@ -219,7 +222,8 @@
                                             </div>
                                         
                                         <div class="form-check d-flex justify-content-start mb-3">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="ResidualApartmentStock">
+                                            <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="ResidualApartmentStock" value="<%= lenderresult.residual_apartment_stock %>" <% if(lenderresult.residual_apartment_stock != null){ %> 
+                                                checked <% }%>>
                                             <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
                                             Residual Apartment Stock
                                             </label>
@@ -229,10 +233,14 @@
                                         <p class="fw-lighter mb-1" >Select all that apply</p>
                                         <select class="form-select mb-3" multiple size='4' id="floatingSelectGrid" name="CommercialConstruction" aria-label="Floating label select example">
                                             
-                                            <option value="0">Non specialist Construction</option>
-                                            <option value="1">Serviced Apartments/Hotel</option>
-                                            <option value="2">Student Accomodation</option>
-                                            <option value="3">Hostel</option>
+                                            <option value="<%= lenderresult.non_specialist_construction %>" <% if(lenderresult.non_specialist_construction != null){ %> 
+                                                selected <% }%>>Non specialist Construction</option>
+                                            <option value="<%= lenderresult.services_apartments_hotel %>" <% if(lenderresult.services_apartments_hotel != null){ %> 
+                                                selected <% }%>>Serviced Apartments/Hotel</option>
+                                            <option value="<%= lenderresult.student_accomodation %>" <% if(lenderresult.student_accomodation != null){ %> 
+                                                selected <% }%>>Student Accomodation</option>
+                                            <option value="<%= lenderresult.hostel %>" <% if(lenderresult.hostel != null){ %> 
+                                                selected <% }%>>Hostel</option>
                                           </select>
                                           
                                         <div class="invalid-feedback">
@@ -240,7 +248,8 @@
                                         </div>
     
                                         <div class="form-check d-flex justify-content-start mb-3">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="CommercialSitePurchaseRefinance">
+                                            <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="CommercialSitePurchaseRefinance" value="<%= lenderresult.commercial_site_purchase_refinance %>" <% if(lenderresult.commercial_site_purchase_refinance != null){ %> 
+                                                checked <% }%>>
                                             <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                             Commercial Site Purchase / Refinance
                                             </label>
@@ -249,8 +258,10 @@
                                         <p class="fw-lighter mb-1" >Select all that apply</p>
                                         <select class="form-select mb-3" multiple size='2' id="floatingSelectGrid" name="LandSubdivision" aria-label="Floating label select example">
                                             
-                                            <option value="0">Residential</option>
-                                            <option value="1">Commercial</option>
+                                            <option value="<%= lenderresult.residential_subdivision %>" <% if(lenderresult.land_sub_residential != null){ %> 
+                                                selected <% }%>>Residential</option>
+                                            <option value="<%= lenderresult.commercial_subdivision %>" <% if(lenderresult.land_sub_commercial != null){ %> 
+                                                selected <% }%>>Commercial</option>
                                             
                                           </select>
                                           
@@ -262,8 +273,10 @@
                                         <p class="fw-lighter mb-1" >Select all that apply</p>
                                         <select class="form-select mb-3" multiple size='2' id="floatingSelectGrid" name="LandSubdivision1" aria-label="Floating label select example">
                                             
-                                            <option value="0">Residential with D.A.</option>
-                                            <option value="1">Residential without D.A.</option>
+                                            <option value="<%= lenderresult.residential_with_da %>" <% if(lenderresult.residential_with_da != null){ %> 
+                                                selected <% }%>>Residential with D.A.</option>
+                                            <option value="<%= lenderresult.residential_without_da %>" <% if(lenderresult.residential_without_da != null){ %> 
+                                                selected <% }%>>Residential without D.A.</option>
                                           </select>
                                           
                                         <div class="invalid-feedback">
@@ -274,9 +287,12 @@
                                         <p class="fw-lighter mb-1" >Select all that apply</p>
                                         <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="LandSubdivision2" aria-label="Floating label select example">
                                             
-                                            <option value="0">Construction</option>
-                                            <option value="1">Purchase</option>
-                                            <option value="2">Refinance</option>
+                                            <option value="<%= lenderresult.btr_construction %>" <% if(lenderresult.btr_construction != null){ %> 
+                                                selected <% }%>>Construction</option>
+                                            <option value="<%= lenderresult.btr_purchase %>" <% if(lenderresult.btr_purchase != null){ %> 
+                                                selected <% }%>>Purchase</option>
+                                            <option value="<%= lenderresult.btr_finance %>" <% if(lenderresult.btr_finance != null){ %> 
+                                                selected <% }%>>Refinance</option>
                                             
                                           </select>
                                           
@@ -288,9 +304,12 @@
                                         <p class="fw-lighter mb-1" >Select all that apply</p>
                                         <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="LandSubdivision3" aria-label="Floating label select example">
                                             
-                                            <option value="0">Construction</option>
-                                            <option value="1">Purchase</option>
-                                            <option value="2">Refinance</option>
+                                            <option value="<%= lenderresult.ndis_sda_construction %>" <% if(lenderresult.ndis_sda_construction != null){ %> 
+                                                selected <% }%>>Construction</option>
+                                            <option value="<%= lenderresult.ndis_sda_purchase %>" <% if(lenderresult.ndis_sda_purchase != null){ %> 
+                                                selected <% }%>>Purchase</option>
+                                            <option value="<%= lenderresult.ndis_sda_refinance %>" <% if(lenderresult.ndis_sda_refinance != null){ %> 
+                                                selected <% }%>>Refinance</option>
                     
                                           </select>
                                           
@@ -299,25 +318,29 @@
                                         </div>
     
                                         <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="SecondMortgages">
+                                            <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="SecondMortgages" value="<%= lenderresult.second_mortgages %>" <% if(lenderresult.second_mortgages != null){ %> 
+                                                checked <% }%>>
                                             <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                             Second Mortgages
                                             </label>
                                         </div>
                                         <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="EquityFinance">
+                                            <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="EquityFinance" value="<%= lenderresult.equity_finance %>" <% if(lenderresult.equity_finance != null){ %> 
+                                                checked <% }%>>
                                             <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
                                             Equity Finance
                                             </label>
                                         </div>
                                         <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="MezzanineFinance">
+                                            <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="MezzanineFinance" value="<%= lenderresult.mezzanine_finance %>" <% if(lenderresult.mezzanine_finance != null){ %> 
+                                                checked <% }%>>
                                             <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                             Mezzanine Finance
                                             </label>
                                         </div>
                                         <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="Resources">
+                                            <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="Resources" value="<%= lenderresult.resources %>" <% if(lenderresult.resources != null){ %> 
+                                                checked <% }%>>
                                             <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
                                             Resources (eg. Mining operations)
                                             </label>
