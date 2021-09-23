@@ -5,367 +5,590 @@
 </div>
 
 <div class="container container-header">
-
-
-
 <!-- <header class="jumbotron"> -->
-    <div class = "container py-4">
-        <!-- <h1 class="display-4">Bright Capital Finance</h1> -->
-        
-        <nav aria-label="breadcrumb" class="mt-4">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/lenders ">Lenders</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Lender Detail</li>
-            </ol>
-        </nav>
-        <div class="text-center">
-            <h1 class="display-6 existing-lenders" style="color: #4d4d4d; text-underline-position: auto; text-decoration:underline;">Lender Detail</h1>
-        </div>
-            
-            <!-- View Sales -->
-      
-            <div class="container mb-3 mt-3">
-                <form action="/lender/<%= lenderresult.liid %>?_method=PUT" method="POST" method="GET" class="inner-outer-container py-4">
-                    <!-- Row 0 of the form  -->
-                    <div class="row">
-                        <div class="col-lg-12 py-2">
-                            <div class="row g-2">
-                                <div class="lender-form col-md">
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" value="<%= lenderresult.lendercompany %>"id="floatingInput" placeholder="" name="LenderCompanyName" required>
-                                        <label for="floatingInput">Lender Company Name</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" value="<%= lenderresult.firstname %>" id="floatingPassword" placeholder="" name="FirstName" required>
-                                        <label for="floatingPassword">First Name</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" value="<%= lenderresult.lastname %>" id="floatingPassword" placeholder="" name="LastName" required>
-                                        <label for="floatingPassword">Last Name</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" value="<%= lenderresult.jobtitle %>" id="floatingPassword" placeholder="" required name="JobTitle">
-                                        <label for="floatingPassword">Job Title</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" value="<%= lenderresult.businessphone %>" id="floatingPassword" placeholder="" name="BusinessPhone">
-                                        <label for="floatingPassword">Business Phone</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" value="<%= lenderresult.mobilephone %>" id="floatingPassword" placeholder="" name="MobilePhone" required>
-                                        <label for="floatingPassword">Mobile Phone</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" value="<%= lenderresult.emailaddress %>" id="floatingPassword" placeholder="" name="EmailAddress" required>
-                                        <label for="floatingPassword">Email Address</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" value="<%= lenderresult.streetaddress %>" id="floatingPassword" placeholder="" name="StreetAddress" required>
-                                        <label for="floatingPassword">Street Address</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" value="<%= lenderresult.city %>" id="floatingPassword" placeholder="" name="City" required>
-                                        <label for="floatingPassword">City</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="number" class="form-control" value="<%= lenderresult.postcode %>" id="floatingPassword" placeholder="" name="PostCode" required>
-                                        <label for="floatingPassword">Post Code</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" value="<%= lenderresult.state %>" id="floatingPassword" placeholder="" name="State" required>
-                                        <label for="floatingPassword">State</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" value="<%= lenderresult.country %>" id="floatingPassword" placeholder="" name="Country" required>
-                                        <label for="floatingPassword">Country</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="number" class="form-control" value="<%= lenderresult.minloanlend %>" id="floatingPassword" placeholder="" name="MinimumLoanLend" required>
-                                        <label for="floatingPassword">Minimum Loan Lend</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="number" class="form-control" value="<%= lenderresult.maxloanlend %>" id="floatingPassword" placeholder="" name="MaximumLoanLend" required>
-                                        <label for="floatingPassword">Maximum Loan Lend</label>
-                                    </div>
-    
-                                    <div class="col-md-12">
-                                        <div class="card-body p-5 mb-3 text-center" style="background-color: #ffffff; border-style: solid; border-width: 1px; border-color: #CED4D9; border-radius: 3px;">
-                                            <h4 class="d-flex justify-content-center display-4" style="color: #4d4d4d;">Accepted Areas for Security</h4>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="NSWMetro" value="<%= lenderresult.aas_nswmetro %>" <% if(lenderresult.aas_nswmetro != null){ %> 
-                                                     checked <% }%> >
-                                                    
-                                                <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;" style="color: #ffffff;">
-                                                NSW Metro
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="NSWRegional" value="<%= lenderresult.aas_nswregional %>" <% if(lenderresult.aas_nswregional != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                                NSW Regional
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="ACT" value="<%= lenderresult.aas_act %>" <% if(lenderresult.aas_act != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                                ACT
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="VICMetro" value="<%= lenderresult.aas_vicmetro %>" <% if(lenderresult.aas_vicmetro != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                                VIC Metro
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="VICRegional" value="<%= lenderresult.aas_vicregional %>" <% if(lenderresult.aas_vicregional != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                                VIC Regional
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="QLDMetro" value="<%= lenderresult.aas_qldmetro %>" <% if(lenderresult.aas_qldmetro != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                                QLD Metro
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="QLDRegional" value="<%= lenderresult.aas_qldregional %>" <% if(lenderresult.aas_qldregional != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                                QLD Regional
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="WAMetro" value="<%= lenderresult.aas_wametro %>" <% if(lenderresult.aas_wametro != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                                WA Metro
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="WARegional" value="<%= lenderresult.aas_waaregional %>" <% if(lenderresult.aas_waregional != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                                WA Regional
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="SAMetro" value="<%= lenderresult.aas_sametro %>" <% if(lenderresult.aas_sametro != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                                SA Metro
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="SARegional" value="<%= lenderresult.aas_saregional %>" <% if(lenderresult.aas_saregional != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                                SA Regional
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="TASMetro" value="<%= lenderresult.aas_tasmetro %>" <% if(lenderresult.aas_tasmetro != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                                TAS Metro
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="TASRegional" value="<%= lenderresult.aas_tasregional %>" <% if(lenderresult.aas_tasregional != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                                TAS Regional
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="NTMetro" value="<%= lenderresult.aas_ntmetro %>" <% if(lenderresult.aas_ntmetro != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                                NT Metro
-                                                </label>
-                                            </div>
-                                            <div class="form-check d-flex justify-content-start">
-                                                <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="NTRegional" value="<%= lenderresult.aas_ntregional %>" <% if(lenderresult.aas_ntregional != null){ %> 
-                                                    checked <% }%> >
-                                                <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                                NT Regional
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                
-                                <div class="col-md-12">
-                                    <div class="card-body p-5 mb-3 text-center" style="background-color: #ffffff;">
-                                        <h4 class="display-4 d-flex justify-content-center" style="color: #4d4d4d">Type of Loans Offered</h4>
-                                        <label class="select-label" for="floatingSelectGrid">Residential Development Construction</label>
-                                        <p class="fw-lighter mb-1" >Select all that apply</p>
-                                        <select class="form-select mb-3" multiple="multiple" size='3' id="floatingSelectGrid" name="ResidentialDevelopmentConstruction" aria-label="Floating label select example">
-                                            <!-- <option disabled>Residential Development Construction</option> -->
-                                            <option name="ResDevConstApartments" value="<%= lenderresult.apartments %>" <% if(lenderresult.apartments != null){ %> 
-                                                selected <% }%> >Apartments</option>
-                                            <option name="ResDevConstTownhouseVilla" value="<%= lenderresult.townhouse_villa %>" <% if(lenderresult.townhouse_villa != null){ %> 
-                                                selected <% }%> >Townhouse/Villa</option>
-                                            <option name="ResDevConstRetirementVillage" value="<%= lenderresult.retirement_village %>" <% if(lenderresult.retirement_village != null){ %> 
-                                                selected <% }%> >Retirement Village</option>
-                                          </select>
-                                          
-                                            <div class="invalid-feedback">
-                                              Please select an item(s) from the list
-                                            </div>
-                                        
-                                        <div class="form-check d-flex justify-content-start mb-3">
-                                            <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="ResidualApartmentStock" value="<%= lenderresult.residual_apartment_stock %>" <% if(lenderresult.residual_apartment_stock != null){ %> 
-                                                checked <% }%>>
-                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                            Residual Apartment Stock
-                                            </label>
-                                        </div>
-    
-                                        <label class="select-label" for="floatingSelectGrid">Commercial Construction</label>
-                                        <p class="fw-lighter mb-1" >Select all that apply</p>
-                                        <select class="form-select mb-3" multiple size='4' id="floatingSelectGrid" name="CommercialConstruction" aria-label="Floating label select example">
-                                            
-                                            <option value="<%= lenderresult.non_specialist_construction %>" <% if(lenderresult.non_specialist_construction != null){ %> 
-                                                selected <% }%>>Non specialist Construction</option>
-                                            <option value="<%= lenderresult.services_apartments_hotel %>" <% if(lenderresult.services_apartments_hotel != null){ %> 
-                                                selected <% }%>>Serviced Apartments/Hotel</option>
-                                            <option value="<%= lenderresult.student_accomodation %>" <% if(lenderresult.student_accomodation != null){ %> 
-                                                selected <% }%>>Student Accomodation</option>
-                                            <option value="<%= lenderresult.hostel %>" <% if(lenderresult.hostel != null){ %> 
-                                                selected <% }%>>Hostel</option>
-                                          </select>
-                                          
-                                        <div class="invalid-feedback">
-                                          Please select an item(s) from the list
-                                        </div>
-    
-                                        <div class="form-check d-flex justify-content-start mb-3">
-                                            <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="CommercialSitePurchaseRefinance" value="<%= lenderresult.commercial_site_purchase_refinance %>" <% if(lenderresult.commercial_site_purchase_refinance != null){ %> 
-                                                checked <% }%>>
-                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                            Commercial Site Purchase / Refinance
-                                            </label>
-                                        </div>
-                                        <label class="select-label" for="floatingSelectGrid">Land Subdivision</label>
-                                        <p class="fw-lighter mb-1" >Select all that apply</p>
-                                        <select class="form-select mb-3" multiple size='2' id="floatingSelectGrid" name="LandSubdivision" aria-label="Floating label select example">
-                                            
-                                            <option value="<%= lenderresult.residential_subdivision %>" <% if(lenderresult.land_sub_residential != null){ %> 
-                                                selected <% }%>>Residential</option>
-                                            <option value="<%= lenderresult.commercial_subdivision %>" <% if(lenderresult.land_sub_commercial != null){ %> 
-                                                selected <% }%>>Commercial</option>
-                                            
-                                          </select>
-                                          
-                                        <div class="invalid-feedback">
-                                          Please select an item(s) from the list
-                                        </div>
-    
-                                        <label class="select-label" for="floatingSelectGrid">Land Purchase / Refinance</label>
-                                        <p class="fw-lighter mb-1" >Select all that apply</p>
-                                        <select class="form-select mb-3" multiple size='2' id="floatingSelectGrid" name="LandSubdivision1" aria-label="Floating label select example">
-                                            
-                                            <option value="<%= lenderresult.residential_with_da %>" <% if(lenderresult.residential_with_da != null){ %> 
-                                                selected <% }%>>Residential with D.A.</option>
-                                            <option value="<%= lenderresult.residential_without_da %>" <% if(lenderresult.residential_without_da != null){ %> 
-                                                selected <% }%>>Residential without D.A.</option>
-                                          </select>
-                                          
-                                        <div class="invalid-feedback">
-                                          Please select an item(s) from the list
-                                        </div>
-    
-                                        <label class="select-label" for="floatingSelectGrid">Build To Rent</label>
-                                        <p class="fw-lighter mb-1" >Select all that apply</p>
-                                        <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="LandSubdivision2" aria-label="Floating label select example">
-                                            
-                                            <option value="<%= lenderresult.btr_construction %>" <% if(lenderresult.btr_construction != null){ %> 
-                                                selected <% }%>>Construction</option>
-                                            <option value="<%= lenderresult.btr_purchase %>" <% if(lenderresult.btr_purchase != null){ %> 
-                                                selected <% }%>>Purchase</option>
-                                            <option value="<%= lenderresult.btr_finance %>" <% if(lenderresult.btr_finance != null){ %> 
-                                                selected <% }%>>Refinance</option>
-                                            
-                                          </select>
-                                          
-                                        <div class="invalid-feedback">
-                                          Please select an item(s) from the list
-                                        </div>
-    
-                                        <label class="select-label" for="floatingSelectGrid">NDIS/SDA</label>
-                                        <p class="fw-lighter mb-1" >Select all that apply</p>
-                                        <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="LandSubdivision3" aria-label="Floating label select example">
-                                            
-                                            <option value="<%= lenderresult.ndis_sda_construction %>" <% if(lenderresult.ndis_sda_construction != null){ %> 
-                                                selected <% }%>>Construction</option>
-                                            <option value="<%= lenderresult.ndis_sda_purchase %>" <% if(lenderresult.ndis_sda_purchase != null){ %> 
-                                                selected <% }%>>Purchase</option>
-                                            <option value="<%= lenderresult.ndis_sda_refinance %>" <% if(lenderresult.ndis_sda_refinance != null){ %> 
-                                                selected <% }%>>Refinance</option>
-                    
-                                          </select>
-                                          
-                                        <div class="invalid-feedback">
-                                          Please select an item(s) from the list
-                                        </div>
-    
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="SecondMortgages" value="<%= lenderresult.second_mortgages %>" <% if(lenderresult.second_mortgages != null){ %> 
-                                                checked <% }%>>
-                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                            Second Mortgages
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="EquityFinance" value="<%= lenderresult.equity_finance %>" <% if(lenderresult.equity_finance != null){ %> 
-                                                checked <% }%>>
-                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                            Equity Finance
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="MezzanineFinance" value="<%= lenderresult.mezzanine_finance %>" <% if(lenderresult.mezzanine_finance != null){ %> 
-                                                checked <% }%>>
-                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                            Mezzanine Finance
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" id="flexCheckChecked" name="Resources" value="<%= lenderresult.resources %>" <% if(lenderresult.resources != null){ %> 
-                                                checked <% }%>>
-                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                            Resources (eg. Mining operations)
-                                            </label>
-                                        </div>
-                                        
+   
+        <div class="justify-content-center py-3">
+        <div class="card col-md-10 shadow-2-strong" style="margin: auto;">
+          <div class="col-md-12 card-body p-5 text-center" style="background-color: #949494;">
+            <h1 class="display-6" style="color: #F6DA11;">Lender Data Detail</h1>
+            <p class="mandatory-fields">* indicates mandatory field</p>
+            <form action="/lender/<%= lenderresult.liid %>?_method=PUT" method="POST" method="GET" class="inner-outer-container py-4">
+                <!-- Row 0 of the form  -->
+                <div class="row">
+                    <div class="col-lg-12 py-2">
+                        <div class="row g-2">
+                            <div class="lender-form col-md">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" value="<%= lenderresult.lendercompany %>" id="floatingInput" placeholder="" name="LenderCompanyName" required>
+                                    <label for="floatingInput">Lender Company Name *</label>
+                                    <div class="invalid-feedback">
+                                        Lender Company Name Required
                                     </div>
                                 </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" value="<%= lenderresult.firstname %>" id="floatingPassword" placeholder="" name="FirstName" required>
+                                    <label for="floatingPassword">First Name *</label>
+                                    <div class="invalid-feedback">
+                                        First Name Required
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" value="<%= lenderresult.lastname %>" id="floatingPassword" placeholder="" name="LastName" required>
+                                    <label for="floatingPassword">Last Name *</label>
+                                    <div class="invalid-feedback">
+                                        Last Name Required
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" value="<%= lenderresult.jobtitle %>" id="floatingPassword" placeholder="" required name="JobTitle">
+                                    <label for="floatingPassword">Job Title *</label>
+                                    <div class="invalid-feedback">
+                                        Job Title Required
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" value="<%= lenderresult.businessphone %>" id="floatingPassword" placeholder="" name="BusinessPhone">
+                                    <label for="floatingPassword">Business Phone</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingPassword" value="<%= lenderresult.mobilephone %>" placeholder="" name="MobilePhone" required>
+                                    <label for="floatingPassword">Mobile Phone *</label>
+                                    <div class="invalid-feedback">
+                                        Mobile Phone Required
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingPassword" value="<%= lenderresult.emailaddress %>" placeholder="" name="EmailAddress" required>
+                                    <label for="floatingPassword">Email Address *</label>
+                                    <div class="invalid-feedback">
+                                        Email Address Required
+                                    </div>
+                                </div>
+                                
+                            <!-- ADDRESS SECTION (3 columns) -->
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingPassword" value="<%= lenderresult.streetaddress %>" placeholder="" name="StreetAddress" >
+                                        <label for="floatingPassword">Street Address</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingPassword" value="<%= lenderresult.city %>" placeholder="" name="City" >
+                                        <label for="floatingPassword">City</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="floatingPassword" value="<%= lenderresult.postcode %>" placeholder="" name="PostCode" >
+                                        <label for="floatingPassword">Post Code</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingPassword" value="<%= lenderresult.state %>" placeholder="" name="State" >
+                                        <label for="floatingPassword">State</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingPassword" value="<%= lenderresult.country %>" placeholder="" name="Country" >
+                                        <label for="floatingPassword">Country</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  END ADDRESS SECTION -->
+
+                                
+
+                                <div class="col-md-12">
+                                    <div class="card-body p-5 mb-3 text-center" style="background-color: #ffffff; border-style: solid; border-width: 1px; border-color: #CED4D9; border-radius: 3px;">
+                                        <h4 class="d-flex justify-content-center display-4" style="color: #4d4d4d; padding-bottom: .25em;">Accepted Areas for Security</h4>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="NSWMetro" value="<%= lenderresult.aas_nswmetro %>" <% if(lenderresult.aas_nswmetro != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;" style="color: #ffffff;">
+                                                    NSW Metro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="NSWRegional" value="<%= lenderresult.aas_nswregional %>" <% if(lenderresult.aas_nswregional != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    NSW Regional
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="ACT" value="<%= lenderresult.aas_act %>" <% if(lenderresult.aas_act != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                                    ACT
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="VICMetro" value="<%= lenderresult.aas_vicmetro %>" <% if(lenderresult.aas_vicmetro != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    VIC Metro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="VICRegional" value="<%= lenderresult.aas_vicregional %>" <% if(lenderresult.aas_vicregional != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                                    VIC Regional
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="QLDMetro" value="<%= lenderresult.aas_qldmetro %>" <% if(lenderresult.aas_qldmetro != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    QLD Metro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="QLDRegional" value="<%= lenderresult.aas_qldregional %>" <% if(lenderresult.aas_qldregional != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                                    QLD Regional
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="WAMetro" value="<%= lenderresult.aas_wametro %>" <% if(lenderresult.aas_wametro != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    WA Metro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="WARegional" value="<%= lenderresult.aas_waregional %>" <% if(lenderresult.aas_waregional != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    WA Regional
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="SAMetro" value="<%= lenderresult.aas_sametro %>" <% if(lenderresult.aas_sametro != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                                    SA Metro
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="SARegional" value="<%= lenderresult.aas_saregional %>" <% if(lenderresult.aas_saregional != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    SA Regional
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="TASMetro" value="<%= lenderresult.aas_tasmetro %>" <% if(lenderresult.aas_tasmetro != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                                    TAS Metro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="TASRegional" value="<%= lenderresult.aas_tasregional %>" <% if(lenderresult.aas_tasregional != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    TAS Regional
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="NTMetro" value="<%= lenderresult.aas_ntmetro %>" <% if(lenderresult.aas_ntmetro != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                                    NT Metro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="NTRegional" value="<%= lenderresult.aas_ntregional %>" <% if(lenderresult.aas_ntregional != null){ %> 
+                                                        checked <% }%>>
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    NT Regional
+                                                    </label>
+                                                </div>
+                                            </div> 
+                                        </div>  
+                                    </div>
+                                </div>
+                                
+                                
+                            
+                            <div class="col-md-12">
+                                <div class="card-body p-5 mb-3 text-center" style="background-color: #ffffff;">
+                                    <h4 class="display-4 d-flex justify-content-center" style="color: #4d4d4d">Type of Loans Offered</h4>
+                                    <label class="select-label" for="floatingSelectGrid">Residential Development Construction</label>
+                                    <p class="fw-lighter mb-1"></p>
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_resdevcon" name="select_all" value="Select All">
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_resdevcon" name="unselect_all" value="Unselect All">
+                                    <select class="form-select mb-3 selectpicker" multiple="multiple" size='3' id="resdevcon" name="ResidentialDevelopmentConstruction" data-all="false" aria-label="Floating label select example">
+                                        <!-- <option disabled>Residential Development Construction</option> -->
+                                        
+                                        <option value="0" name="ResDevConstApartments" value="<%= lenderresult.apartments %>" <% if(lenderresult.apartments != null){ %> 
+                                            selected <% }%>>Apartments</option>
+                                        <option value="1" name="ResDevConstTownhouseVilla" value="<%= lenderresult.townhouse_villa %>" <% if(lenderresult.townhouse_villa != null){ %> 
+                                            selected <% }%>>Townhouse/Villa</option>
+                                        <option value="2" name="ResDevConstRetirementVillage" value="<%= lenderresult.retirement_village %>" <% if(lenderresult.retirement_village != null){ %> 
+                                            selected <% }%>>Retirement Village</option>
+                                      </select>
+                                      
+                                        <div class="invalid-feedback">
+                                          Please select an item(s) from the list
+                                        </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.minloanlendresdevcon %>" id="floatingPassword" placeholder="" name="MinimumLoanLendResDevCon" required>
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.maxloanlendresdevcon %>" id="floatingPassword" placeholder="" name="MaximumLoanLendResDevCon" required>
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.minintrateresdevcon %>" id="floatingPassword" placeholder="" name="MinimumIntRateResDevCon" required>
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     
+
+                                    <label class="select-label" for="floatingSelectGrid">Commercial Construction</label>
+                                    <p class="fw-lighter mb-1"></p>
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_comcon" name="select_all" value="Select All">
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_comcon" name="unselect_all" value="Unselect All">
+                                    <select class="form-select mb-3" multiple size='4' id="comcon" name="CommercialConstruction" aria-label="Floating label select example">
+                                        
+                                        <option value="0" value="<%= lenderresult.non_specialist_construction %>" <% if(lenderresult.non_specialist_construction != null){ %> 
+                                            selected <% }%>>Non specialist Construction</option>
+                                        <option value="1" value="<%= lenderresult.serviced_apartments_hotel %>" <% if(lenderresult.serviced_apartments_hotel != null){ %> 
+                                            selected <% }%>>Serviced Apartments/Hotel</option>
+                                        <option value="2" value="<%= lenderresult.student_accommodation %>" <% if(lenderresult.student_accommodation != null){ %> 
+                                            selected <% }%>>Student Accomodation</option>
+                                        <option value="3" value="<%= lenderresult.hostel %>" <% if(lenderresult.hostel != null){ %> 
+                                            selected <% }%>>Hostel</option>
+                                      </select>
+                                      
+                                    <div class="invalid-feedback">
+                                      Please select an item(s) from the list
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.minloanlendcomcon %>" id="floatingPassword" placeholder="" name="MinimumLoanLendComCon" required>
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.maxloanlendcomcon %>" id="floatingPassword" placeholder="" name="MaximumLoanLendComCon" required>
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.minintratecomcon %>" id="floatingPassword" placeholder="" name="MinimumIntRateComCon" required>
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label class="select-label" for="floatingSelectGrid">Land Subdivision</label>
+                                    <p class="fw-lighter mb-1"></p>
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_landsub" name="select_all" value="Select All">
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_landsub" name="unselect_all" value="Unselect All">
+                                    <select class="form-select mb-3" multiple size='2' id="landsub" name="LandSubdivision" aria-label="Floating label select example">
+                                        
+                                        <option value="<%= lenderresult.land_sub_residential %>" <% if(lenderresult.land_sub_residential != null){ %> 
+                                            selected <% }%>>Residential</option>
+                                        <option value="<%= lenderresult.land_sub_commercial %>" <% if(lenderresult.land_sub_commercial != null){ %> 
+                                            selected <% }%>>Commercial</option>
+                                        
+                                      </select>
+                                      
+                                    <div class="invalid-feedback">
+                                      Please select an item(s) from the list
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.minloanlendlandsub %>" id="floatingPassword" placeholder="" name="MinimumLoanLendLandSub" required>
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.maxloanlendlandsub %>" id="floatingPassword" placeholder="" name="MaximumLoanLendLandSub" required>
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.minintratelandsub %>" id="floatingPassword" placeholder="" name="MinimumIntRateLandSub" required>
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label class="select-label" for="floatingSelectGrid">Land Purchase / Refinance</label>
+                                    <p class="fw-lighter mb-1"></p>
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_purrefi" name="select_all" value="Select All">
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_purrefi" name="unselect_all" value="Unselect All">
+                                    <select class="form-select mb-3" multiple size='2' id="purrefi" name="LandSubdivision1" aria-label="Floating label select example">
+                                        
+                                        <option value="<%= lenderresult.residential_with_da %>" <% if(lenderresult.residential_with_da != null){ %> 
+                                            selected <% }%>>Residential with D.A.</option>
+                                        <option value="0" value="<%= lenderresult.residential_without_da %>" <% if(lenderresult.residential_without_da != null){ %> 
+                                            selected <% }%>>Residential without D.A.</option>
+                                      </select>
+                                      
+                                    <div class="invalid-feedback">
+                                      Please select an item(s) from the list
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.minloanlendlandpurrefi %>" id="floatingPassword" placeholder="" name="MinimumLoanLendLandPurRefi" required>
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.maxloanlendlandpurrefi %>" id="floatingPassword" placeholder="" name="MaximumLoanLendLandPurRefi" required>
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.minintratelandpurrefi %>" id="floatingPassword" placeholder="" name="MinimumIntRateLandPurRefi" required>
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label class="select-label" for="floatingSelectGrid">Build To Rent</label>
+                                    <p class="fw-lighter mb-1"></p>
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_btr" name="select_all" value="Select All">
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_btr" name="unselect_all" value="Unselect All">
+                                    <select class="form-select mb-3" multiple size='3' id="btr" name="LandSubdivision2" aria-label="Floating label select example">
+                                        
+                                        <option value="<%= lenderresult.btr_construction %>" <% if(lenderresult.btr_construction != null){ %> 
+                                            selected <% }%>>Construction</option>
+                                        <option value="<%= lenderresult.btr_residential %>" <% if(lenderresult.btr_purchase != null){ %> 
+                                            selected <% }%>>Purchase</option>
+                                        <option value="<%= lenderresult.btr_refinance %>" <% if(lenderresult.btr_refinance != null){ %> 
+                                            selected <% }%>>Refinance</option>
+                                        
+                                      </select>
+                                      
+                                    <div class="invalid-feedback">
+                                      Please select an item(s) from the list
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.minloanlendbtr %>" id="floatingPassword" placeholder="" name="MinimumLoanLendBTR" required>
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.maxloanlendbtr %>" id="floatingPassword" placeholder="" name="MaximumLoanLendBTR" required>
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.minintratebtr %>" id="floatingPassword" placeholder="" name="MinimumIntRateBTR" required>
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label class="select-label" for="floatingSelectGrid">NDIS/SDA</label>
+                                    <p class="fw-lighter mb-1"></p>
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_ndis" name="select_all" value="Select All">
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_ndis" name="unselect_all" value="Unselect All">
+                                    <select class="form-select mb-3" multiple size='3' id="ndis" name="LandSubdivision3" aria-label="Floating label select example">
+                                        
+                                        <option value="<%= lenderresult.ndis_sda_construction %>" <% if(lenderresult.ndis_sda_construction != null){ %> 
+                                            selected <% }%>>Construction</option>
+                                        <option value="<%= lenderresult.ndis_sda_purchase %>" <% if(lenderresult.ndis_sda_construction != null){ %> 
+                                            selected <% }%>>Purchase</option>
+                                        <option value="<%= lenderresult.ndis_sda_refinance %>" <% if(lenderresult.ndis_sda_refinance != null){ %> 
+                                            selected <% }%>>Refinance</option>
+                
+                                      </select>
+                                      
+                                    <div class="invalid-feedback">
+                                      Please select an item(s) from the list
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.minloanlendndis %>" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" required>
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.maxloanlendndis %>" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" required>
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" value="<%= lenderresult.minintratendis %>" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" required>
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="ResidualApartmentStock" value="<%= lenderresult.residual_apartment_stock %>" <% if(lenderresult.residual_apartment_stock != null){ %> 
+                                            checked <% }%>>
+                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                        Residual Apartment Stock
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="CommercialSitePurchaseRefinance" value="<%= lenderresult.commercial_site_purchase_refinance %>" <% if(lenderresult.commercial_site_purchase_refinance != null){ %> 
+                                            checked <% }%>>
+                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                        Commercial Site Purchase / Refinance
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="SecondMortgages" value="<%= lenderresult.second_mortgages %>" <% if(lenderresult.second_mortgages != null){ %> 
+                                            checked <% }%>>
+                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                        Second Mortgages
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="EquityFinance" value="<%= lenderresult.equity_finance %>" <% if(lenderresult.equity_finance != null){ %> 
+                                            checked <% }%>>
+                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                        Equity Finance
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="MezzanineFinance"value="<%= lenderresult.mezzanine_finance %>" <% if(lenderresult.mezzanine_finance != null){ %> 
+                                            checked <% }%>>
+                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                        Mezzanine Finance
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="Resources" value="<%= lenderresult.resources %>" <% if(lenderresult.resources-4 != null){ %> 
+                                            checked <% }%>>
+                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                        Resources (eg. Mining operations)
+                                        </label>
+                                    </div>
                                     
                                 </div>
                             </div>
+                                
+                                
+                            </div>
                         </div>
-                    </div>  
-                    <div class="button-container text-center">
-                        <button class="btn btn-primary btn-lg btn-block" type="submit">Update</button>
-                    </div>   
-                        
-                </form>
-            </div>
-            
-             
-
-   </div>        
+                    </div>
+                </div>     
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 </div>
 
+<!-- </header> -->
+
+</div>
+
+<div class="container container-actions">
+    <div class = "row">
+        <div class = "col-lg-12">
+            
+                
+            
+        </div>
+    </div>
+</div>
 
 
 <%- include ('partials/footer') -%>

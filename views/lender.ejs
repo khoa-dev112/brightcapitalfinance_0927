@@ -96,7 +96,8 @@
         <div class="justify-content-center py-3">
         <div class="card col-md-10 shadow-2-strong" style="margin: auto;">
           <div class="col-md-12 card-body p-5 text-center" style="background-color: #949494;">
-            <h1 class="display-6" style="color: #F6DA11;">Lender Questionnaire</h1>
+            <h1 class="display-6" style="color: #F6DA11;">Lender Information</h1>
+            <p class="mandatory-fields">* indicates mandatory field</p>
             <form action="/lender" method="POST" class="inner-outer-container py-4 needs-validation" onSubmit="return validate()" novalidate>
                 <!-- Row 0 of the form  -->
                 <div class="row">
@@ -105,28 +106,28 @@
                             <div class="lender-form col-md">
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="floatingInput" placeholder="" name="LenderCompanyName" required>
-                                    <label for="floatingInput">Lender Company Name</label>
+                                    <label for="floatingInput">Lender Company Name *</label>
                                     <div class="invalid-feedback">
                                         Lender Company Name Required
                                     </div>
                                 </div>
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="floatingPassword" placeholder="" name="FirstName" required>
-                                    <label for="floatingPassword">First Name</label>
+                                    <label for="floatingPassword">First Name *</label>
                                     <div class="invalid-feedback">
                                         First Name Required
                                     </div>
                                 </div>
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="floatingPassword" placeholder="" name="LastName" required>
-                                    <label for="floatingPassword">Last Name</label>
+                                    <label for="floatingPassword">Last Name *</label>
                                     <div class="invalid-feedback">
                                         Last Name Required
                                     </div>
                                 </div>
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="floatingPassword" placeholder="" required name="JobTitle">
-                                    <label for="floatingPassword">Job Title</label>
+                                    <label for="floatingPassword">Job Title *</label>
                                     <div class="invalid-feedback">
                                         Job Title Required
                                     </div>
@@ -137,146 +138,159 @@
                                 </div>
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="floatingPassword" placeholder="" name="MobilePhone" required>
-                                    <label for="floatingPassword">Mobile Phone</label>
+                                    <label for="floatingPassword">Mobile Phone *</label>
                                     <div class="invalid-feedback">
                                         Mobile Phone Required
                                     </div>
                                 </div>
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="floatingPassword" placeholder="" name="EmailAddress" required>
-                                    <label for="floatingPassword">Email Address</label>
+                                    <label for="floatingPassword">Email Address *</label>
                                     <div class="invalid-feedback">
                                         Email Address Required
                                     </div>
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="StreetAddress" >
-                                    <label for="floatingPassword">Street Address</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="City" >
-                                    <label for="floatingPassword">City</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="PostCode" >
-                                    <label for="floatingPassword">Post Code</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="State" >
-                                    <label for="floatingPassword">State</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="Country" >
-                                    <label for="floatingPassword">Country</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLend" required>
-                                    <label for="floatingPassword">Minimum Loan Lend</label>
-                                    <div class="invalid-feedback">
-                                        Minimum Loan Lend Amount Required
+                                
+                            <!-- ADDRESS SECTION (3 columns) -->
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingPassword" placeholder="" name="StreetAddress" >
+                                        <label for="floatingPassword">Street Address</label>
                                     </div>
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLend" required>
-                                    <label for="floatingPassword">Maximum Loan Lend</label>
-                                    <div class="invalid-feedback">
-                                        Maximumn Loan Lend Amount Required
+                                <div class="col-lg-4">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingPassword" placeholder="" name="City" >
+                                        <label for="floatingPassword">City</label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="floatingPassword" placeholder="" name="PostCode" >
+                                        <label for="floatingPassword">Post Code</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingPassword" placeholder="" name="State" >
+                                        <label for="floatingPassword">State</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingPassword" placeholder="" name="Country" >
+                                        <label for="floatingPassword">Country</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  END ADDRESS SECTION -->
+
+                                
 
                                 <div class="col-md-12">
                                     <div class="card-body p-5 mb-3 text-center" style="background-color: #ffffff; border-style: solid; border-width: 1px; border-color: #CED4D9; border-radius: 3px;">
-                                        <h4 class="d-flex justify-content-center display-4" style="color: #4d4d4d;">Accepted Areas for Security</h4>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="NSWMetro">
-                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;" style="color: #ffffff;">
-                                            NSW Metro
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="NSWRegional">
-                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                            NSW Regional
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="ACT">
-                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                            ACT
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="VICMetro">
-                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                            VIC Metro
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="VICRegional">
-                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                            VIC Regional
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="QLDMetro">
-                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                            QLD Metro
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="QLDRegional">
-                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                            QLD Regional
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="WAMetro">
-                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                            WA Metro
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="WARegional">
-                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                            WA Regional
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="SAMetro">
-                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                            SA Metro
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="SARegional">
-                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                            SA Regional
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="TASMetro">
-                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                            TAS Metro
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="TASRegional">
-                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                            TAS Regional
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="NTMetro">
-                                            <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                            NT Metro
-                                            </label>
-                                        </div>
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="NTRegional">
-                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                            NT Regional
-                                            </label>
-                                        </div>
+                                        <h4 class="d-flex justify-content-center display-4" style="color: #4d4d4d; padding-bottom: .25em;">Accepted Areas for Security</h4>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="NSWMetro">
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;" style="color: #ffffff;">
+                                                    NSW Metro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="NSWRegional">
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    NSW Regional
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="ACT">
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                                    ACT
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="VICMetro">
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    VIC Metro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="VICRegional">
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                                    VIC Regional
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="QLDMetro">
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    QLD Metro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="QLDRegional">
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                                    QLD Regional
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="WAMetro">
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    WA Metro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="WARegional">
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    WA Regional
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="SAMetro">
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                                    SA Metro
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="SARegional">
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    SA Regional
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="TASMetro">
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                                    TAS Metro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="TASRegional">
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    TAS Regional
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="NTMetro">
+                                                    <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                                    NT Metro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check d-flex justify-content-start">
+                                                    <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="NTRegional">
+                                                    <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                                    NT Regional
+                                                    </label>
+                                                </div>
+                                            </div> 
+                                        </div>  
                                     </div>
                                 </div>
                                 
@@ -286,9 +300,12 @@
                                 <div class="card-body p-5 mb-3 text-center" style="background-color: #ffffff;">
                                     <h4 class="display-4 d-flex justify-content-center" style="color: #4d4d4d">Type of Loans Offered</h4>
                                     <label class="select-label" for="floatingSelectGrid">Residential Development Construction</label>
-                                    <p class="fw-lighter mb-1" >Select all that apply</p>
-                                    <select class="form-select mb-3" multiple="multiple" size='3' id="floatingSelectGrid" name="ResidentialDevelopmentConstruction" aria-label="Floating label select example">
+                                    <p class="fw-lighter mb-1"></p>
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_resdevcon" name="select_all" value="Select All">
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_resdevcon" name="unselect_all" value="Unselect All">
+                                    <select class="form-select mb-3 selectpicker" multiple="multiple" size='3' id="resdevcon" name="ResidentialDevelopmentConstruction" data-all="false" aria-label="Floating label select example">
                                         <!-- <option disabled>Residential Development Construction</option> -->
+                                        
                                         <option value="0" name="ResDevConstApartments">Apartments</option>
                                         <option value="1" name="ResDevConstTownhouseVilla">Townhouse/Villa</option>
                                         <option value="2" name="ResDevConstRetirementVillage">Retirement Village</option>
@@ -297,17 +314,42 @@
                                         <div class="invalid-feedback">
                                           Please select an item(s) from the list
                                         </div>
-                                    
-                                    <div class="form-check d-flex justify-content-start mb-3">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="ResidualApartmentStock">
-                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                        Residual Apartment Stock
-                                        </label>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendResDevCon" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendResDevCon" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateResDevCon" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                    
 
                                     <label class="select-label" for="floatingSelectGrid">Commercial Construction</label>
-                                    <p class="fw-lighter mb-1" >Select all that apply</p>
-                                    <select class="form-select mb-3" multiple size='4' id="floatingSelectGrid" name="CommercialConstruction" aria-label="Floating label select example">
+                                    <p class="fw-lighter mb-1"></p>
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_comcon" name="select_all" value="Select All">
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_comcon" name="unselect_all" value="Unselect All">
+                                    <select class="form-select mb-3" multiple size='4' id="comcon" name="CommercialConstruction" aria-label="Floating label select example">
                                         
                                         <option value="0">Non specialist Construction</option>
                                         <option value="1">Serviced Apartments/Hotel</option>
@@ -319,15 +361,41 @@
                                       Please select an item(s) from the list
                                     </div>
 
-                                    <div class="form-check d-flex justify-content-start mb-3">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="CommercialSitePurchaseRefinance">
-                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
-                                        Commercial Site Purchase / Refinance
-                                        </label>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendComCon" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendComCon" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateComCon" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+
                                     <label class="select-label" for="floatingSelectGrid">Land Subdivision</label>
-                                    <p class="fw-lighter mb-1" >Select all that apply</p>
-                                    <select class="form-select mb-3" multiple size='2' id="floatingSelectGrid" name="LandSubdivision" aria-label="Floating label select example">
+                                    <p class="fw-lighter mb-1"></p>
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_landsub" name="select_all" value="Select All">
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_landsub" name="unselect_all" value="Unselect All">
+                                    <select class="form-select mb-3" multiple size='2' id="landsub" name="LandSubdivision" aria-label="Floating label select example">
                                         
                                         <option value="0">Residential</option>
                                         <option value="1">Commercial</option>
@@ -338,9 +406,41 @@
                                       Please select an item(s) from the list
                                     </div>
 
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendLandSub" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendLandSub" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateLandSub" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <label class="select-label" for="floatingSelectGrid">Land Purchase / Refinance</label>
-                                    <p class="fw-lighter mb-1" >Select all that apply</p>
-                                    <select class="form-select mb-3" multiple size='2' id="floatingSelectGrid" name="LandSubdivision1" aria-label="Floating label select example">
+                                    <p class="fw-lighter mb-1"></p>
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_purrefi" name="select_all" value="Select All">
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_purrefi" name="unselect_all" value="Unselect All">
+                                    <select class="form-select mb-3" multiple size='2' id="purrefi" name="LandSubdivision1" aria-label="Floating label select example">
                                         
                                         <option value="0">Residential with D.A.</option>
                                         <option value="1">Residential without D.A.</option>
@@ -350,9 +450,41 @@
                                       Please select an item(s) from the list
                                     </div>
 
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendLandPurRefi" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendLandPurRefi" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateLandPurRefi" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <label class="select-label" for="floatingSelectGrid">Build To Rent</label>
-                                    <p class="fw-lighter mb-1" >Select all that apply</p>
-                                    <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="LandSubdivision2" aria-label="Floating label select example">
+                                    <p class="fw-lighter mb-1"></p>
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_btr" name="select_all" value="Select All">
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_btr" name="unselect_all" value="Unselect All">
+                                    <select class="form-select mb-3" multiple size='3' id="btr" name="LandSubdivision2" aria-label="Floating label select example">
                                         
                                         <option value="0">Construction</option>
                                         <option value="1">Purchase</option>
@@ -364,9 +496,41 @@
                                       Please select an item(s) from the list
                                     </div>
 
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendBTR" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendBTR" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateBTR" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <label class="select-label" for="floatingSelectGrid">NDIS/SDA</label>
-                                    <p class="fw-lighter mb-1" >Select all that apply</p>
-                                    <select class="form-select mb-3" multiple size='3' id="floatingSelectGrid" name="LandSubdivision3" aria-label="Floating label select example">
+                                    <p class="fw-lighter mb-1"></p>
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_ndis" name="select_all" value="Select All">
+                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_ndis" name="unselect_all" value="Unselect All">
+                                    <select class="form-select mb-3" multiple size='3' id="ndis" name="LandSubdivision3" aria-label="Floating label select example">
                                         
                                         <option value="0">Construction</option>
                                         <option value="1">Purchase</option>
@@ -378,6 +542,48 @@
                                       Please select an item(s) from the list
                                     </div>
 
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="0.00" required>
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="ResidualApartmentStock">
+                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                        Residual Apartment Stock
+                                        </label>
+                                    </div>
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="CommercialSitePurchaseRefinance">
+                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                        Commercial Site Purchase / Refinance
+                                        </label>
+                                    </div>
                                     <div class="form-check d-flex justify-content-start">
                                         <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="SecondMortgages">
                                         <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">

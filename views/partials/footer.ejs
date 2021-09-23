@@ -76,7 +76,68 @@
          
       return false;
       });
+
+      
+
+      $('#select_all_resdevcon').click(function() {
+        $('#resdevcon option').prop('selected', true);
+      });
+
+      $('#unselect_all_resdevcon').click(function() {
+        $('#resdevcon option').prop('selected', false);
+      });
+
+      $('#select_all_comcon').click(function() {
+        $('#comcon option').prop('selected', true);
+      });
+
+      $('#unselect_all_comcon').click(function() {
+        $('#comcon option').prop('selected', false);
+      });
+
+      $('#select_all_landsub').click(function() {
+        $('#landsub option').prop('selected', true);
+      });
+
+      $('#unselect_all_landsub').click(function() {
+        $('#landsub option').prop('selected', false);
+      });
+
+      $('#select_all_purrefi').click(function() {
+        $('#purrefi option').prop('selected', true);
+      });
+
+      $('#unselect_all_purrefi').click(function() {
+        $('#purrefi option').prop('selected', false);
+      });
+
+      $('#select_all_btr').click(function() {
+        $('#btr option').prop('selected', true);
+      });
+
+      $('#unselect_all_btr').click(function() {
+        $('#btr option').prop('selected', false);
+      });
+
+      $('#select_all_ndis').click(function() {
+        $('#ndis option').prop('selected', true);
+      });
+
+      $('#unselect_all_ndis').click(function() {
+        $('#ndis option').prop('selected', false);
+      });
+
+  
+      function setTwoNumberDecimal(event) {
+        this.value = parseFloat(this.value).toFixed(2);
+
+    }
+
   </script>
+
+  
+  
+    
 
 
 
