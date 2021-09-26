@@ -98,40 +98,47 @@
           <div class="col-md-12 card-body p-5 text-center" style="background-color: #949494;">
             <h1 class="display-6" style="color: #F6DA11;">Lender Information</h1>
             <p class="mandatory-fields">* indicates mandatory field</p>
-            <form action="/lender" method="POST" class="inner-outer-container py-4 needs-validation" onSubmit="return validate()" novalidate>
+            <form action="/lender" method="POST" class="inner-outer-container py-4 needs-validation" novalidate>
                 <!-- Row 0 of the form  -->
                 <div class="row">
                     <div class="col-lg-12 py-2">
                         <div class="row g-2">
                             <div class="lender-form col-md">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="" name="LenderCompanyName" required>
-                                    <label for="floatingInput">Lender Company Name *</label>
-                                    <div class="invalid-feedback">
-                                        Lender Company Name Required
+                                <div class="row">
+                                    
+                                    <div class="form-floating mb-3 col-md-6">
+                                        <input type="text" class="form-control" id="floatingInput" placeholder="" name="LenderCompanyName" required>
+                                        <label for="floatingInput">Lender Company Name *</label>
+                                        <div class="invalid-feedback">
+                                            Lender Company Name Required
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="form-floating mb-3 col-md-4">
+                                        <input type="text" class="form-control" id="floatingPassword" placeholder="" name="FirstName" required>
+                                        <label for="floatingPassword">First Name *</label>
+                                        <div class="invalid-feedback">
+                                            First Name Required
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-3 col-md-4">
+                                        <input type="text" class="form-control" id="floatingPassword" placeholder="" name="LastName" required>
+                                        <label for="floatingPassword">Last Name *</label>
+                                        <div class="invalid-feedback">
+                                            Last Name Required
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-3 col-md-4">
+                                        <input type="text" class="form-control" id="floatingPassword" placeholder="" required name="JobTitle">
+                                        <label for="floatingPassword">Job Title *</label>
+                                        <div class="invalid-feedback">
+                                            Job Title Required
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="FirstName" required>
-                                    <label for="floatingPassword">First Name *</label>
-                                    <div class="invalid-feedback">
-                                        First Name Required
-                                    </div>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="LastName" required>
-                                    <label for="floatingPassword">Last Name *</label>
-                                    <div class="invalid-feedback">
-                                        Last Name Required
-                                    </div>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" required name="JobTitle">
-                                    <label for="floatingPassword">Job Title *</label>
-                                    <div class="invalid-feedback">
-                                        Job Title Required
-                                    </div>
-                                </div>
+                                    
                                 <div class="form-floating mb-3">
                                     <input type="text" class="form-control" id="floatingPassword" placeholder="" name="BusinessPhone">
                                     <label for="floatingPassword">Business Phone</label>
@@ -298,317 +305,507 @@
                             
                             <div class="col-md-12">
                                 <div class="card-body p-5 mb-3 text-center" style="background-color: #ffffff;">
-                                    <h4 class="display-4 d-flex justify-content-center" style="color: #4d4d4d">Type of Loans Offered</h4>
-                                    <label class="select-label" for="floatingSelectGrid">Residential Development Construction</label>
-                                    <p class="fw-lighter mb-1"></p>
-                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_resdevcon" name="select_all" value="Select All">
-                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_resdevcon" name="unselect_all" value="Unselect All">
-                                    <select class="form-select mb-3 selectpicker" multiple="multiple" size='3' id="resdevcon" name="ResidentialDevelopmentConstruction" data-all="false" aria-label="Floating label select example">
-                                        <!-- <option disabled>Residential Development Construction</option> -->
-                                        
-                                        <option value="0" name="ResDevConstApartments">Apartments</option>
-                                        <option value="1" name="ResDevConstTownhouseVilla">Townhouse/Villa</option>
-                                        <option value="2" name="ResDevConstRetirementVillage">Retirement Village</option>
-                                      </select>
-                                      
+                                    <div class="optional-required">
+                                        <h4 class="display-4 d-flex justify-content-center" style="color: #4d4d4d">Type of Loans Offered</h4>
+                                        <label class="select-label" for="floatingSelectGrid">Residential Development Construction</label>
+                                        <p class="fw-lighter mb-1"></p>
+                                        <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_resdevcon" name="select_all" value="Select All">
+                                        <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_resdevcon" name="unselect_all" value="Unselect All">
+                                        <select class="form-select mb-3 selectpicker" multiple="multiple" size='3' id="resdevcon" name="ResidentialDevelopmentConstruction" data-all="false" aria-label="Floating label select example">
+                                            <!-- <option disabled>Residential Development Construction</option> -->
+                                            
+                                            <option value="0" name="ResDevConstApartments" data-required>Apartments</option>
+                                            <option value="1" name="ResDevConstTownhouseVilla" data-required>Townhouse/Villa</option>
+                                            <option value="2" name="ResDevConstRetirementVillage" data-required>Retirement Village</option>
+                                          </select>
+                                          
+                                            <div class="invalid-feedback">
+                                              Please select an item(s) from the list
+                                            </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendResDevCon" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Loan Lend Amount Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendResDevCon" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Maximumn Loan Lend Amount Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateResDevCon" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Min Interest Rate *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Interest Rate Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="optional-required">
+                                        <label class="select-label" for="floatingSelectGrid">Commercial Construction</label>
+                                        <p class="fw-lighter mb-1"></p>
+                                        <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_comcon" name="select_all" value="Select All">
+                                        <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_comcon" name="unselect_all" value="Unselect All">
+                                        <select class="form-select mb-3" multiple size='4' id="comcon" name="CommercialConstruction" aria-label="Floating label select example">
+                                            
+                                            <option value="0" data-required>Non specialist Construction</option>
+                                            <option value="1" data-required>Serviced Apartments/Hotel</option>
+                                            <option value="2" data-required>Student Accomodation</option>
+                                            <option value="3" data-required>Hostel</option>
+                                          </select>
+                                          
                                         <div class="invalid-feedback">
                                           Please select an item(s) from the list
                                         </div>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendResDevCon" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Minimum Loan Lend *</label>
-                                                <div class="invalid-feedback">
-                                                    Minimum Loan Lend Amount Required
+    
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendComCon" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Loan Lend Amount Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendComCon" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Maximumn Loan Lend Amount Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateComCon" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Min Interest Rate *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Interest Rate Required
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendResDevCon" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Maximum Loan Lend *</label>
-                                                <div class="invalid-feedback">
-                                                    Maximumn Loan Lend Amount Required
+                                    </div>
+
+
+                                    <div class="optional-required">
+
+                                        <label class="select-label" for="floatingSelectGrid">Land Subdivision</label>
+                                        <p class="fw-lighter mb-1"></p>
+                                        <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_landsub" name="select_all" value="Select All">
+                                        <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_landsub" name="unselect_all" value="Unselect All">
+                                        <select class="form-select mb-3" multiple size='2' id="landsub" name="LandSubdivision" aria-label="Floating label select example">
+                                            
+                                            <option value="0" data-required>Residential</option>
+                                            <option value="1" data-required>Commercial</option>
+                                            
+                                          </select>
+                                          
+                                        <div class="invalid-feedback">
+                                          Please select an item(s) from the list
+                                        </div>
+    
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendLandSub" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Loan Lend Amount Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendLandSub" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Maximumn Loan Lend Amount Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateLandSub" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Min Interest Rate *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Interest Rate Required
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateResDevCon" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Min Interest Rate *</label>
-                                                <div class="invalid-feedback">
-                                                    Minimum Interest Rate Required
+                                    </div>
+
+                                    <div class="optional-required">
+                                        <label class="select-label" for="floatingSelectGrid">Land Purchase / Refinance</label>
+                                        <p class="fw-lighter mb-1"></p>
+                                        <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_purrefi" name="select_all" value="Select All">
+                                        <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_purrefi" name="unselect_all" value="Unselect All">
+                                        <select class="form-select mb-3" multiple size='2' id="purrefi" name="LandSubdivision1" aria-label="Floating label select example">
+                                            
+                                            <option value="0" data-required>Residential with D.A.</option>
+                                            <option value="1" data-required>Residential without D.A.</option>
+                                          </select>
+                                          
+                                        <div class="invalid-feedback">
+                                          Please select an item(s) from the list
+                                        </div>
+    
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendLandPurRefi" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Loan Lend Amount Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendLandPurRefi" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Maximumn Loan Lend Amount Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateLandPurRefi" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Min Interest Rate *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Interest Rate Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="optional-required">
+                                        <label class="select-label" for="floatingSelectGrid">Build To Rent</label>
+                                        <p class="fw-lighter mb-1"></p>
+                                        <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_btr" name="select_all" value="Select All">
+                                        <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_btr" name="unselect_all" value="Unselect All">
+                                        <select class="form-select mb-3" multiple size='3' id="btr" name="LandSubdivision2" aria-label="Floating label select example">
+                                            
+                                            <option value="0" data-required>Construction</option>
+                                            <option value="1" data-required>Purchase</option>
+                                            <option value="2" data-required>Refinance</option>
+                                            
+                                          </select>
+                                          
+                                        <div class="invalid-feedback">
+                                          Please select an item(s) from the list
+                                        </div>
+    
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendBTR" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Loan Lend Amount Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendBTR" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Maximumn Loan Lend Amount Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateBTR" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Min Interest Rate *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Interest Rate Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="optional-required">
+                                        <label class="select-label" for="floatingSelectGrid">NDIS/SDA</label>
+                                        <p class="fw-lighter mb-1"></p>
+                                        <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_ndis" name="select_all" value="Select All">
+                                        <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_ndis" name="unselect_all" value="Unselect All">
+                                        <select class="form-select mb-3" multiple size='3' id="ndis" name="LandSubdivision3" aria-label="Floating label select example">
+                                            
+                                            <option value="0" data-required>Construction</option>
+                                            <option value="1" data-required>Purchase</option>
+                                            <option value="2" data-required>Refinance</option>
+                    
+                                          </select>
+                                          
+                                        <div class="invalid-feedback">
+                                          Please select an item(s) from the list
+                                        </div>
+    
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Loan Lend Amount Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Maximumn Loan Lend Amount Required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Min Interest Rate *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Interest Rate Required
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     
-
-                                    <label class="select-label" for="floatingSelectGrid">Commercial Construction</label>
-                                    <p class="fw-lighter mb-1"></p>
-                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_comcon" name="select_all" value="Select All">
-                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_comcon" name="unselect_all" value="Unselect All">
-                                    <select class="form-select mb-3" multiple size='4' id="comcon" name="CommercialConstruction" aria-label="Floating label select example">
-                                        
-                                        <option value="0">Non specialist Construction</option>
-                                        <option value="1">Serviced Apartments/Hotel</option>
-                                        <option value="2">Student Accomodation</option>
-                                        <option value="3">Hostel</option>
-                                      </select>
-                                      
-                                    <div class="invalid-feedback">
-                                      Please select an item(s) from the list
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendComCon" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Minimum Loan Lend *</label>
-                                                <div class="invalid-feedback">
-                                                    Minimum Loan Lend Amount Required
+                                    <div class="optional-required">
+                                        <div class="form-check d-flex justify-content-start">
+                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="ResidualApartmentStock" data-required>
+                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
+                                            Residual Apartment Stock
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Loan Lend Amount Required
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendComCon" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Maximum Loan Lend *</label>
-                                                <div class="invalid-feedback">
-                                                    Maximumn Loan Lend Amount Required
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                    <div class="invalid-feedback">
+                                                        Maximumn Loan Lend Amount Required
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateComCon" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Min Interest Rate *</label>
-                                                <div class="invalid-feedback">
-                                                    Minimum Interest Rate Required
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <label class="select-label" for="floatingSelectGrid">Land Subdivision</label>
-                                    <p class="fw-lighter mb-1"></p>
-                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_landsub" name="select_all" value="Select All">
-                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_landsub" name="unselect_all" value="Unselect All">
-                                    <select class="form-select mb-3" multiple size='2' id="landsub" name="LandSubdivision" aria-label="Floating label select example">
-                                        
-                                        <option value="0">Residential</option>
-                                        <option value="1">Commercial</option>
-                                        
-                                      </select>
-                                      
-                                    <div class="invalid-feedback">
-                                      Please select an item(s) from the list
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendLandSub" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Minimum Loan Lend *</label>
-                                                <div class="invalid-feedback">
-                                                    Minimum Loan Lend Amount Required
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendLandSub" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Maximum Loan Lend *</label>
-                                                <div class="invalid-feedback">
-                                                    Maximumn Loan Lend Amount Required
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateLandSub" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Min Interest Rate *</label>
-                                                <div class="invalid-feedback">
-                                                    Minimum Interest Rate Required
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <label class="select-label" for="floatingSelectGrid">Land Purchase / Refinance</label>
-                                    <p class="fw-lighter mb-1"></p>
-                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_purrefi" name="select_all" value="Select All">
-                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_purrefi" name="unselect_all" value="Unselect All">
-                                    <select class="form-select mb-3" multiple size='2' id="purrefi" name="LandSubdivision1" aria-label="Floating label select example">
-                                        
-                                        <option value="0">Residential with D.A.</option>
-                                        <option value="1">Residential without D.A.</option>
-                                      </select>
-                                      
-                                    <div class="invalid-feedback">
-                                      Please select an item(s) from the list
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendLandPurRefi" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Minimum Loan Lend *</label>
-                                                <div class="invalid-feedback">
-                                                    Minimum Loan Lend Amount Required
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendLandPurRefi" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Maximum Loan Lend *</label>
-                                                <div class="invalid-feedback">
-                                                    Maximumn Loan Lend Amount Required
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateLandPurRefi" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Min Interest Rate *</label>
-                                                <div class="invalid-feedback">
-                                                    Minimum Interest Rate Required
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <label class="select-label" for="floatingSelectGrid">Build To Rent</label>
-                                    <p class="fw-lighter mb-1"></p>
-                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_btr" name="select_all" value="Select All">
-                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_btr" name="unselect_all" value="Unselect All">
-                                    <select class="form-select mb-3" multiple size='3' id="btr" name="LandSubdivision2" aria-label="Floating label select example">
-                                        
-                                        <option value="0">Construction</option>
-                                        <option value="1">Purchase</option>
-                                        <option value="2">Refinance</option>
-                                        
-                                      </select>
-                                      
-                                    <div class="invalid-feedback">
-                                      Please select an item(s) from the list
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendBTR" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Minimum Loan Lend *</label>
-                                                <div class="invalid-feedback">
-                                                    Minimum Loan Lend Amount Required
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendBTR" onchange="setTwoNumberDecimal" min="0" max="1000000000" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Maximum Loan Lend *</label>
-                                                <div class="invalid-feedback">
-                                                    Maximumn Loan Lend Amount Required
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateBTR" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Min Interest Rate *</label>
-                                                <div class="invalid-feedback">
-                                                    Minimum Interest Rate Required
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <label class="select-label" for="floatingSelectGrid">NDIS/SDA</label>
-                                    <p class="fw-lighter mb-1"></p>
-                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="select_all_ndis" name="select_all" value="Select All">
-                                    <input class="btn btn-select-all btn-sm mb-2" type="button" id="unselect_all_ndis" name="unselect_all" value="Unselect All">
-                                    <select class="form-select mb-3" multiple size='3' id="ndis" name="LandSubdivision3" aria-label="Floating label select example">
-                                        
-                                        <option value="0">Construction</option>
-                                        <option value="1">Purchase</option>
-                                        <option value="2">Refinance</option>
-                
-                                      </select>
-                                      
-                                    <div class="invalid-feedback">
-                                      Please select an item(s) from the list
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Minimum Loan Lend *</label>
-                                                <div class="invalid-feedback">
-                                                    Minimum Loan Lend Amount Required
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Maximum Loan Lend *</label>
-                                                <div class="invalid-feedback">
-                                                    Maximumn Loan Lend Amount Required
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="0.00" required>
-                                                <label for="floatingPassword">Min Interest Rate *</label>
-                                                <div class="invalid-feedback">
-                                                    Minimum Interest Rate Required
+                                            <div class="col-lg-4">
+                                                <div class="form-floating mb-3">
+                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="" required>
+                                                    <label for="floatingPassword">Min Interest Rate *</label>
+                                                    <div class="invalid-feedback">
+                                                        Minimum Interest Rate Required
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="ResidualApartmentStock">
-                                        <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                        Residual Apartment Stock
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="CommercialSitePurchaseRefinance">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="CommercialSitePurchaseRefinance" data-required>
                                         <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                         Commercial Site Purchase / Refinance
                                         </label>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="" >
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="" >
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="SecondMortgages">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="SecondMortgages" data-required>
                                         <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                         Second Mortgages
                                         </label>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="EquityFinance">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="EquityFinance" data-required>
                                         <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
                                         Equity Finance
                                         </label>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="MezzanineFinance">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="MezzanineFinance" data-required>
                                         <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                         Mezzanine Finance
                                         </label>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="Resources">
+                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="Resources" data-required>
                                         <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
                                         Resources (eg. Mining operations)
                                         </label>
                                     </div>
-                                    
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                                 

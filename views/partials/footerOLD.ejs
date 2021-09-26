@@ -64,138 +64,76 @@
     document.getElementById("year").innerHTML = date;
 </script>
 
-// ATTEMPTING TO APPLY .optional-required to checkbox sections at bottom of Type of Loans Offered selction in lender.ejs
-<!-- <script type='text/javascript'>
-  $('input[type=checkbox]').mousedown(function(e) {
-    e.preventDefault();
-    $(this).prop('selected', $(this).prop('selected') ? false : true);
-    //alert($("#flexCheckChecked:selected").length);//select input selected count
-    //alert("Checkbox selected!")
-  });
-</script> -->
-
 <script type="text/javascript">
     $('option').mousedown(function(e) {
       e.preventDefault();	
       
       $(this).prop('selected', $(this).prop('selected') ? false : true);
-
-      // attach optional-required functionality to selects
-      optionalRequiredSectionUpdate($(this).parents('.optional-required')[0]);
       
       //alert($("#floatingSelectGrid:selected").length);//select option selected count
       //if($("#mySelect :selected").length==2)
       //some stuff
-
+         
       return false;
       });
 
-      // optional-required functionality, given a section HTML element make inputs required or not required depending on selected options
-      function optionalRequiredSectionUpdate(section) {
-        // check if there is at least option element in the section that has a data-required attribute and is selected
-        let inputsRequired = Array.from(section.querySelectorAll('option[data-required]')).filter((option) => {
-          return option.selected == true;
-        }).length > 0;
+      
 
-        // if there was one, set all number inputs of the section to be required, otherwise set them to be non-required
-        let inputs = section.querySelectorAll('input[type="number"]');
-        if (inputsRequired) {
-          inputs.forEach((input) => {
-            input.setAttribute('required', true);
-          });
-        } else {
-          inputs.forEach((input) => {
-            input.removeAttribute('required');
-          });
-        }
-      }
-
-      // update all sections at once, used on page load and when select/unselect all buttons are used
-      function optionalRequiredSectionUpdateAll() {
-        let sections = document.querySelectorAll('.optional-required');
-        sections.forEach((section) => {
-            optionalRequiredSectionUpdate(section);
-        });
-      }
-
-      // optional-required: initialize the required values on page load for all sections
-      window.addEventListener('load', function() {
-        optionalRequiredSectionUpdateAll();
+      $('#select_all_resdevcon').click(function() {
+        $('#resdevcon option').prop('selected', true);
       });
 
-    </script>
+      $('#unselect_all_resdevcon').click(function() {
+        $('#resdevcon option').prop('selected', false);
+      });
 
-   
-      
-// Multiselect functionality (select-all/unselect all buttons for the selects in Type of Loan offered section of lender.ejs)
-<script type='text/javascript'>
-  $('#select_all_resdevcon').click(function() {
-    $('#resdevcon option').prop('selected', true);
-    optionalRequiredSectionUpdateAll();
-  });
+      $('#select_all_comcon').click(function() {
+        $('#comcon option').prop('selected', true);
+      });
 
-  $('#unselect_all_resdevcon').click(function() {
-    $('#resdevcon option').prop('selected', false);
-    optionalRequiredSectionUpdateAll();
-  });
+      $('#unselect_all_comcon').click(function() {
+        $('#comcon option').prop('selected', false);
+      });
 
-  $('#select_all_comcon').click(function() {
-    $('#comcon option').prop('selected', true);
-    optionalRequiredSectionUpdateAll();
-  });
+      $('#select_all_landsub').click(function() {
+        $('#landsub option').prop('selected', true);
+      });
 
-  $('#unselect_all_comcon').click(function() {
-    $('#comcon option').prop('selected', false);
-    optionalRequiredSectionUpdateAll();
-  });
+      $('#unselect_all_landsub').click(function() {
+        $('#landsub option').prop('selected', false);
+      });
 
-  $('#select_all_landsub').click(function() {
-    $('#landsub option').prop('selected', true);
-    optionalRequiredSectionUpdateAll();
-  });
+      $('#select_all_purrefi').click(function() {
+        $('#purrefi option').prop('selected', true);
+      });
 
-  $('#unselect_all_landsub').click(function() {
-    $('#landsub option').prop('selected', false);
-    optionalRequiredSectionUpdateAll();
-  });
+      $('#unselect_all_purrefi').click(function() {
+        $('#purrefi option').prop('selected', false);
+      });
 
-  $('#select_all_purrefi').click(function() {
-    $('#purrefi option').prop('selected', true);
-    optionalRequiredSectionUpdateAll();
-  });
+      $('#select_all_btr').click(function() {
+        $('#btr option').prop('selected', true);
+      });
 
-  $('#unselect_all_purrefi').click(function() {
-    $('#purrefi option').prop('selected', false);
-    optionalRequiredSectionUpdateAll();
-  });
+      $('#unselect_all_btr').click(function() {
+        $('#btr option').prop('selected', false);
+      });
 
-  $('#select_all_btr').click(function() {
-    $('#btr option').prop('selected', true);
-    optionalRequiredSectionUpdateAll();
-  });
+      $('#select_all_ndis').click(function() {
+        $('#ndis option').prop('selected', true);
+      });
 
-  $('#unselect_all_btr').click(function() {
-    $('#btr option').prop('selected', false);
-    optionalRequiredSectionUpdateAll();
-  });
+      $('#unselect_all_ndis').click(function() {
+        $('#ndis option').prop('selected', false);
+      });
 
-  $('#select_all_ndis').click(function() {
-    $('#ndis option').prop('selected', true);
-    optionalRequiredSectionUpdateAll();
-  });
+  
+      function setTwoNumberDecimal(event) {
+        this.value = parseFloat(this.value).toFixed(2);
 
-  $('#unselect_all_ndis').click(function() {
-    $('#ndis option').prop('selected', false);
-    optionalRequiredSectionUpdateAll();
-  });
+    }
 
-
-  function setTwoNumberDecimal(event) {
-    this.value = parseFloat(this.value).toFixed(2);
-
-}
-
-</script>  
+  </script>
 
   
   

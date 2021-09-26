@@ -1,9 +1,6 @@
 {
-  "appService.zipIgnorePattern": [
-    "node_modules{,/**}",
-    ".vscode{,/**}"
-  ],
+  "appService.zipIgnorePattern": ["node_modules{,/**}", ".vscode{,/**}"],
   "appService.defaultWebAppToDeploy": "/subscriptions/883e508c-7fa6-4410-a3d3-5d03a6653271/resourceGroups/bright-capital-finance/providers/Microsoft.Web/sites/bright-capital-finance",
   "appService.deploySubpath": ".",
-  "workbench.colorTheme": "Base16 Dark Greenscreen"
+  "workbench.colorTheme": "Cobalt2"
 }

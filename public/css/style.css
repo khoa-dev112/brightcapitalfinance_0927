@@ -22,6 +22,8 @@ p {
   font-size: clamp(1em, 2vw, 2em);
 }
 
+/* */
+
 .mandatory-fields {
   font-size: 1em;
   color: #f6dd0d;
