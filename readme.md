@@ -1,11 +1,11 @@
 Node/Express/MySQL web application for Bright Capital Finance (Lender Intake)
 Created 8/9/2021
 ====================================================================
-Initial database setup in Azure
+Initial database setup in Azure (SEE .env FOR MORE)
 
     host: 'tbrannon-mysql-demo.mysql.database.azure.com',
     user: 'toddb@tbrannon-mysql-demo.mysql.database.azure.com',
-    password: 'Azure4BCF_2021',
+    password: '',
     database: 'brightcapitalfinance',
     port: 3306,
     ssl: true

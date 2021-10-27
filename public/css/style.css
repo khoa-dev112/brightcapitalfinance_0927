@@ -19,7 +19,7 @@ h1 {
 }
 
 p {
-  font-size: clamp(1em, 2vw, 2em);
+  font-size: clamp(1em, 2vw, 1em);
 }
 
 /* */

@@ -1,0 +1,108 @@
+<%- include ('partials/header') -%>
+
+<div class="container logo-container py-5 d-flex justify-content-center">
+    <img src="../img/BCF_logo.jpg" class="logo-image" alt="Bright Capital Finance" width="500" height="175">
+</div>
+
+<div class="container container-header">
+
+
+
+<!-- <header class="jumbotron"> -->
+    <div class = "container py-4">
+        <!-- <h1 class="display-4">Bright Capital Finance</h1> -->
+        
+        <!-- <nav aria-label="breadcrumb" class="mt-4">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Lenders</li>
+            </ol>
+        </nav> -->
+        <div class="text-center">
+            <h1 class="display-6 existing-lenders" style="color: #4d4d4d; text-underline-position: auto; text-decoration:underline;">Existing Lenders</h1>
+        </div>
+            
+        <div class="card mb-3 mt-3 advanced-search">
+            <div class="card-body">
+                <div class="text-center">Advanced Search</div>
+                <div class="row">
+                    <div class="col-lg-4 mt-3">
+                        <%- include ('partials/dropdown', {
+                            options: typeofloanArray.map(m => {
+                              return { name: m.typeofloan, value: m.typeofloan }
+                            }),
+                            name: "loantypes",
+                            label: "Type of Loan"
+                      }) -%>
+                    </div>
+
+                    <div class="col-lg-2 mt-3">
+                        <select class="form-select mb-3 custom-select">Loan Amount</option>
+                            <option value="1">Less than</option>
+                            <option value="2">Equal to</option>
+                            <option value="3">Greater than</option>
+                          </select>
+                    </div>
+                    <div class="col-md-3 mt-3">
+                        <!-- <label for="validationTooltipUsername">Loan Amount</label> -->
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="validationTooltipUsernamePrepend">$</span>
+                          </div>
+                          <input type="text" class="form-control" id="validationTooltipLoanAmount" placeholder="Loan Amount" aria-describedby="validationTooltipLoanAmountPrepend" required>
+                          <div class="invalid-tooltip">
+                            Please choose a unique and valid loan amount.
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+            <!-- View Sales -->
+      
+            <div class="container mb-3 mt-3">
+                <table class="table table-striped table-bordered table-expandable mydatatable" style="width: 100%">
+                    <thead>
+                        <tr>
+                          <th scope="col">Lender Company</th>
+                          <th scope="col">Contact Name</th>
+                          <th scope="col">Phone Number</th>
+                          <th scope="col">Contact Email</th>
+                          <th scope="col">Interest Rate</th>
+                          <th></th>
+                          <!-- <th scope="col">Job Title</th> -->
+                          <!-- <th scope="col">Email</th> -->
+                          <!-- <th scope="col"></th> -->
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% lenderresults.forEach(function(lenderresult) { %> 
+                            <tr>
+                                <td><%= lenderresult.lendercompany %></td>
+                                <td><%= lenderresult.firstname + " " + lenderresult.lastname %></td>
+                                <td><%= lenderresult.mobilephone %></td>    
+                                <!-- <td><%= lenderresult.firstname %></td>
+                                <td><%= lenderresult.lastname %></td> -->
+                                <!-- <td><%= lenderresult.jobtitle %></td> -->
+                                <td><%= lenderresult.email %></td>
+                                <td><%= lenderresult.email %></td>
+                                <td>
+                                    <a href="/lenders/<%= lenderresult.liid %>" class="more-link">More</a>
+                                    
+                                    <!-- <a href="/" class="btn btn-sm btn-danger">Delete</a> -->
+                                </td>
+                            </tr> 
+                        <% }); %>
+
+                    </tbody>
+                </table>
+            </div>
+            
+             
+
+   </div>        
+</div>
+
+
+
+<%- include ('partials/footer') -%>

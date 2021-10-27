@@ -64,7 +64,7 @@
     document.getElementById("year").innerHTML = date;
 </script>
 
-// ATTEMPTING TO APPLY .optional-required to checkbox sections at bottom of Type of Loans Offered selction in lender.ejs
+
 <!-- <script type='text/javascript'>
   $('input[type=checkbox]').mousedown(function(e) {
     e.preventDefault();
@@ -127,8 +127,9 @@
 
    
       
-// Multiselect functionality (select-all/unselect all buttons for the selects in Type of Loan offered section of lender.ejs)
+
 <script type='text/javascript'>
+  // Multiselect functionality (select-all/unselect all buttons for the selects in Type of Loan offered section of lender.ejs)
   $('#select_all_resdevcon').click(function() {
     $('#resdevcon option').prop('selected', true);
     optionalRequiredSectionUpdateAll();
@@ -232,6 +233,74 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
+
+  $('#checkbox_1').change(function() {
+
+    if($('.ras').attr('required')){
+
+      $('.ras').removeAttr('required');
+    }
+    else {
+      $('.ras').attr('required','required');
+    }
+
+  });
+  $('#checkbox_2').change(function() {
+
+    if($('.csp').attr('required')){
+
+      $('.csp').removeAttr('required');
+    }
+    else {
+      $('.csp').attr('required','required');
+    }
+
+  });
+  $('#checkbox_3').change(function() {
+
+    if($('.sm').attr('required')){
+
+      $('.sm').removeAttr('required');
+    }
+    else {
+      $('.sm').attr('required','required');
+    }
+
+  });
+  $('#checkbox_4').change(function() {
+
+    if($('.ef').attr('required')){
+
+      $('.ef').removeAttr('required');
+    }
+    else {
+      $('.ef').attr('required','required');
+    }
+
+  });
+    $('#checkbox_5').change(function() {
+
+    if($('.mf').attr('required')){
+
+      $('.mf').removeAttr('required');
+    }
+    else {
+      $('.mf').attr('required','required');
+    }
+
+  });
+    $('#checkbox_6').change(function() {
+
+    if($('.r').attr('required')){
+
+      $('.r').removeAttr('required');
+    }
+    else {
+      $('.r').attr('required','required');
+    }
+
+  });
+
 	$('.table').footable();
 });
 

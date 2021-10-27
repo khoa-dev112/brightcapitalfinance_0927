@@ -105,58 +105,74 @@
                         <div class="row g-2">
                             <div class="lender-form col-md">
                                 <div class="row">
-                                    
-                                    <div class="form-floating mb-3 col-md-6">
+                                   <div class="col-md-6">
+                                    <div class="form-floating mb-3">
                                         <input type="text" class="form-control" id="floatingInput" placeholder="" name="LenderCompanyName" required>
                                         <label for="floatingInput">Lender Company Name *</label>
                                         <div class="invalid-feedback">
                                             Lender Company Name Required
                                         </div>
                                     </div>
-                                    
+                                   </div>  
                                 </div>
                                 <div class="row">
-                                    <div class="form-floating mb-3 col-md-4">
-                                        <input type="text" class="form-control" id="floatingPassword" placeholder="" name="FirstName" required>
-                                        <label for="floatingPassword">First Name *</label>
-                                        <div class="invalid-feedback">
-                                            First Name Required
-                                        </div>
-                                    </div>
-                                    <div class="form-floating mb-3 col-md-4">
-                                        <input type="text" class="form-control" id="floatingPassword" placeholder="" name="LastName" required>
-                                        <label for="floatingPassword">Last Name *</label>
-                                        <div class="invalid-feedback">
-                                            Last Name Required
-                                        </div>
-                                    </div>
-                                    <div class="form-floating mb-3 col-md-4">
-                                        <input type="text" class="form-control" id="floatingPassword" placeholder="" required name="JobTitle">
-                                        <label for="floatingPassword">Job Title *</label>
-                                        <div class="invalid-feedback">
-                                            Job Title Required
-                                        </div>
-                                    </div>
-                                </div>
                                     
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="BusinessPhone">
-                                    <label for="floatingPassword">Business Phone</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="MobilePhone" required>
-                                    <label for="floatingPassword">Mobile Phone *</label>
-                                    <div class="invalid-feedback">
-                                        Mobile Phone Required
+                                    <div class="col-md-4">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingPassword" placeholder="" name="FirstName" required>
+                                            <label for="floatingPassword">First Name *</label>
+                                            <div class="invalid-feedback">
+                                                First Name Required
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingPassword" placeholder="" name="EmailAddress" required>
-                                    <label for="floatingPassword">Email Address *</label>
-                                    <div class="invalid-feedback">
-                                        Email Address Required
+                                    <div class="col-md-4">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingPassword" placeholder="" name="LastName" required>
+                                            <label for="floatingPassword">Last Name *</label>
+                                            <div class="invalid-feedback">
+                                                Last Name Required
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="col-md-4">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingPassword" placeholder="" name="JobTitle" required>
+                                            <label for="floatingPassword">Job Title *</label>
+                                            <div class="invalid-feedback">
+                                                Job Title Required
+                                            </div>
+                                        </div>
+                                    </div>      
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingPassword" placeholder="" name="BusinessPhone">
+                                            <label for="floatingPassword">Business Phone</label>
+                                        </div>
+                                    </div>    
+                                    <div class="col-md-4">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingPassword" placeholder="" name="MobilePhone" required>
+                                            <label for="floatingPassword">Mobile Phone *</label>
+                                            <div class="invalid-feedback">
+                                                Mobile Phone Required
+                                            </div>
+                                        </div>
+                                    </div>   
+                                    <div class="col-md-4">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingPassword" placeholder="" name="EmailAddress" required>
+                                            <label for="floatingPassword">Email Address *</label>
+                                            <div class="invalid-feedback">
+                                                Email Address Required
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                                      
+                                    
                                 
                             <!-- ADDRESS SECTION (3 columns) -->
                             <div class="row">
@@ -592,47 +608,48 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    <div class="optional-required">
-                                        <div class="form-check d-flex justify-content-start">
-                                            <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="ResidualApartmentStock" data-required>
-                                            <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
-                                            Residual Apartment Stock
-                                            </label>
+
+                                    <div class="form-check d-flex justify-content-start">
+                                        <input class="form-check-input" type="checkbox" value="1" id="checkbox_1" name="ResidualApartmentStock" data-required>
+                                        <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
+                                        Residual Apartment Stock
+                                        </label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control ras" id="ras_1" placeholder="" name="MinimumLoanLendRAS" min="0" max="1000000000" step="0.01" value="" >
+                                                <label for="floatingPassword">Minimum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Loan Lend Amount Required
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form-floating mb-3">
-                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="" required>
-                                                    <label for="floatingPassword">Minimum Loan Lend *</label>
-                                                    <div class="invalid-feedback">
-                                                        Minimum Loan Lend Amount Required
-                                                    </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control ras" id="ras_2" placeholder="" name="MaximumLoanLendRAS" min="0" max="1000000000" step="0.01" value="" >
+                                                <label for="floatingPassword">Maximum Loan Lend *</label>
+                                                <div class="invalid-feedback">
+                                                    Maximumn Loan Lend Amount Required
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-floating mb-3">
-                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="" required>
-                                                    <label for="floatingPassword">Maximum Loan Lend *</label>
-                                                    <div class="invalid-feedback">
-                                                        Maximumn Loan Lend Amount Required
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form-floating mb-3">
-                                                    <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="" required>
-                                                    <label for="floatingPassword">Min Interest Rate *</label>
-                                                    <div class="invalid-feedback">
-                                                        Minimum Interest Rate Required
-                                                    </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-floating mb-3">
+                                                <input type="number" class="form-control ras" id="ras_3" placeholder="" name="MinimumIntRateRAS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
+                                                <label for="floatingPassword">Min Interest Rate *</label>
+                                                <div class="invalid-feedback">
+                                                    Minimum Interest Rate Required
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     
+                                        
+                                    
+                                    
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="CommercialSitePurchaseRefinance" data-required>
+                                        <input class="form-check-input" type="checkbox" value="1" id="checkbox_2" name="CommercialSitePurchaseRefinance" data-required>
                                         <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                         Commercial Site Purchase / Refinance
                                         </label>
@@ -640,7 +657,7 @@
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="" >
+                                                <input type="number" class="form-control csp" id="csp_1" placeholder="" name="MinimumLoanLendCSPR" min="0" max="1000000000" step="0.01" value="" >
                                                 <label for="floatingPassword">Minimum Loan Lend *</label>
                                                 <div class="invalid-feedback">
                                                     Minimum Loan Lend Amount Required
@@ -649,7 +666,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="" >
+                                                <input type="number" class="form-control csp" id="csp_2" placeholder="" name="MaximumLoanLendCSPR" min="0" max="1000000000" step="0.01" value="" >
                                                 <label for="floatingPassword">Maximum Loan Lend *</label>
                                                 <div class="invalid-feedback">
                                                     Maximumn Loan Lend Amount Required
@@ -658,7 +675,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
+                                                <input type="number" class="form-control csp" id="csp_3" placeholder="" name="MinimumIntRateCSPR" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
                                                 <label for="floatingPassword">Min Interest Rate *</label>
                                                 <div class="invalid-feedback">
                                                     Minimum Interest Rate Required
@@ -667,7 +684,7 @@
                                         </div>
                                     </div>
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="SecondMortgages" data-required>
+                                        <input class="form-check-input" type="checkbox" value="1" id="checkbox_3" name="SecondMortgages" data-required>
                                         <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                         Second Mortgages
                                         </label>
@@ -675,7 +692,7 @@
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <input type="number" class="form-control sm" id="sm_1" placeholder="" name="MinimumLoanLendSM" min="0" max="1000000000" step="0.01" value="">
                                                 <label for="floatingPassword">Minimum Loan Lend *</label>
                                                 <div class="invalid-feedback">
                                                     Minimum Loan Lend Amount Required
@@ -684,7 +701,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <input type="number" class="form-control sm" id="sm_2" placeholder="" name="MaximumLoanLendSM" min="0" max="1000000000" step="0.01" value="">
                                                 <label for="floatingPassword">Maximum Loan Lend *</label>
                                                 <div class="invalid-feedback">
                                                     Maximumn Loan Lend Amount Required
@@ -693,7 +710,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
+                                                <input type="number" class="form-control sm" id="sm_3" placeholder="" name="MinimumIntRateSM" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
                                                 <label for="floatingPassword">Min Interest Rate *</label>
                                                 <div class="invalid-feedback">
                                                     Minimum Interest Rate Required
@@ -702,7 +719,7 @@
                                         </div>
                                     </div>
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="EquityFinance" data-required>
+                                        <input class="form-check-input" type="checkbox" value="1" id="checkbox_4" name="EquityFinance" data-required>
                                         <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
                                         Equity Finance
                                         </label>
@@ -710,7 +727,7 @@
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <input type="number" class="form-control ef" id="ef_1" placeholder="" name="MinimumLoanLendEF" min="0" max="1000000000" step="0.01" value="">
                                                 <label for="floatingPassword">Minimum Loan Lend *</label>
                                                 <div class="invalid-feedback">
                                                     Minimum Loan Lend Amount Required
@@ -719,7 +736,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <input type="number" class="form-control ef" id="ef_2" placeholder="" name="MaximumLoanLendEF" min="0" max="1000000000" step="0.01" value="">
                                                 <label for="floatingPassword">Maximum Loan Lend *</label>
                                                 <div class="invalid-feedback">
                                                     Maximumn Loan Lend Amount Required
@@ -728,7 +745,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
+                                                <input type="number" class="form-control ef" id="ef_3" placeholder="" name="MinimumIntRateEF" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
                                                 <label for="floatingPassword">Min Interest Rate *</label>
                                                 <div class="invalid-feedback">
                                                     Minimum Interest Rate Required
@@ -737,7 +754,7 @@
                                         </div>
                                     </div>
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" name="MezzanineFinance" data-required>
+                                        <input class="form-check-input" type="checkbox" value="1" id="checkbox_5" name="MezzanineFinance" data-required>
                                         <label class="form-check-label" for="flexCheckDefault" style="padding-left:3px;">
                                         Mezzanine Finance
                                         </label>
@@ -745,7 +762,7 @@
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <input type="number" class="form-control mf" id="mf_1" placeholder="" name="MinimumLoanLendMF" min="0" max="1000000000" step="0.01" value="">
                                                 <label for="floatingPassword">Minimum Loan Lend *</label>
                                                 <div class="invalid-feedback">
                                                     Minimum Loan Lend Amount Required
@@ -754,7 +771,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <input type="number" class="form-control mf" id="mf_2" placeholder="" name="MaximumLoanLendMF" min="0" max="1000000000" step="0.01" value="">
                                                 <label for="floatingPassword">Maximum Loan Lend *</label>
                                                 <div class="invalid-feedback">
                                                     Maximumn Loan Lend Amount Required
@@ -763,7 +780,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
+                                                <input type="number" class="form-control mf" id="mf_3" placeholder="" name="MinimumIntRateMF" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
                                                 <label for="floatingPassword">Min Interest Rate *</label>
                                                 <div class="invalid-feedback">
                                                     Minimum Interest Rate Required
@@ -772,7 +789,7 @@
                                         </div>
                                     </div>
                                     <div class="form-check d-flex justify-content-start">
-                                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" name="Resources" data-required>
+                                        <input class="form-check-input" type="checkbox" value="1" id="checkbox_6" name="Resources" data-required>
                                         <label class="form-check-label" for="flexCheckChecked" style="padding-left:3px;">
                                         Resources (eg. Mining operations)
                                         </label>
@@ -780,7 +797,7 @@
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <input type="number" class="form-control r" id="r_1" placeholder="" name="MinimumLoanLendRES" min="0" max="1000000000" step="0.01" value="">
                                                 <label for="floatingPassword">Minimum Loan Lend *</label>
                                                 <div class="invalid-feedback">
                                                     Minimum Loan Lend Amount Required
@@ -789,7 +806,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MaximumLoanLendNDIS" min="0" max="1000000000" step="0.01" value="">
+                                                <input type="number" class="form-control r" id="r_2" placeholder="" name="MaximumLoanLendRES" min="0" max="1000000000" step="0.01" value="">
                                                 <label for="floatingPassword">Maximum Loan Lend *</label>
                                                 <div class="invalid-feedback">
                                                     Maximumn Loan Lend Amount Required
@@ -798,7 +815,7 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="floatingPassword" placeholder="" name="MinimumIntRateNDIS" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
+                                                <input type="number" class="form-control r" id="r_3" placeholder="" name="MinimumIntRateRES" onchange="setTwoNumberDecimal" min="0" max="100" step="0.01" value="">
                                                 <label for="floatingPassword">Min Interest Rate *</label>
                                                 <div class="invalid-feedback">
                                                     Minimum Interest Rate Required

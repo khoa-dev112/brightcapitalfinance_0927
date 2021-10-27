@@ -85,13 +85,29 @@ router.post("/lender", (req, res) => {
         { db: "maxloanlendndis", form: "MaximumLoanLendNDIS" },
         { db: "minintratendis", form: "MinimumIntRateNDIS" }, 
         { db: "residual_apartment_stock", form: "ResidualApartmentStock" },
+        { db: "minloanlendras", form: "MinimumLoanLendRAS" },
+        { db: "maxloanlendras", form: "MaximumLoanLendRAS" },
+        { db: "minintrateras", form: "MinimumIntRateRAS" }, 
         { db: "commercial_site_purchase_refinance", form: "CommercialSitePurchaseRefinance" },
+        { db: "minloanlendcspr", form: "MinimumLoanLendCSPR" },
+        { db: "maxloanlendcspr", form: "MaximumLoanLendCSPR" },
+        { db: "minintratecspr", form: "MinimumIntRateCSPR" }, 
         { db: "second_mortgages", form: "SecondMortgages" },
+        { db: "minloanlendsm", form: "MinimumLoanLendSM" },
+        { db: "maxloanlendsm", form: "MaximumLoanLendSM" },
+        { db: "minintratesm", form: "MinimumIntRateSM" }, 
         { db: "equity_finance", form: "EquityFinance" },
+        { db: "minloanlendef", form: "MinimumLoanLendEF" },
+        { db: "maxloanlendef", form: "MaximumLoanLendEF" },
+        { db: "minintrateef", form: "MinimumIntRateEF" }, 
         { db: "mezzanine_finance", form: "MezzanineFinance" },
+        { db: "minloanlendmf", form: "MinimumLoanLendMF" },
+        { db: "maxloanlendmf", form: "MaximumLoanLendMF" },
+        { db: "minintratemf", form: "MinimumIntRateMF" }, 
         { db: "resources", form: "Resources" },
-        
-        
+        { db: "minloanlendres", form: "MinimumLoanLendRES" },
+        { db: "maxloanlendres", form: "MaximumLoanLendRES" },
+        { db: "minintrateres", form: "MinimumIntRateRES" }              
     ]
 
     const lender = req.body;
@@ -149,6 +165,27 @@ router.get('/lenders', (req, res) => {
         res.render('lenders', {
             title: 'Bright Capital Finance - All Lenders',
             lenderresults: rows
+        })
+    })
+})
+
+// All Lenders - ADMIN -  GET Route
+router.get('/lenders-admin', (req, res) => {
+    let sql = `SELECT * FROM lenders WHERE liid IS NOT NULL; SELECT * FROM loantypes;`;
+    let query = pool.query(sql, (err, rows, results) => {
+        if (err) throw err;
+        console.log(rows[0].liid, rows)
+        res.render('lenders-admin', {
+            title: 'Bright Capital Finance - All Lenders',
+            lenderresults: rows[0],
+            typeofloanArray: rows[1],
+            // serviceArray: rows[1],
+            // cashierArray: rows[2],
+            // salespersonArray: rows[3],
+            // posidArray: rows[4],
+            // trailernumberArray: rows[5],
+            // openingdayArray: rows[6],
+            // stateArray: rows[7],  
         })
     })
 })
